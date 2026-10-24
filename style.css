@@ -312,3 +312,27 @@ body{
   max-width:100%;
   white-space:normal;
 }
+
+
+/* Currently... reading & Last.fm listening. */
+.currently-panel .inner{
+  text-align:center;
+  padding:8px 1px 2px;
+}
+.currently-panel .currently-line{
+  font-size:10px;
+  line-height:1.55;
+  overflow-wrap:anywhere;
+  margin:0 0 9px;
+}
+.currently-key{
+  display:block;
+  font:700 10px/1.4 "Courier New",monospace;
+  color:#222;
+  margin-bottom:1px;
+}
+.currently-panel cite{font-family:Georgia,"Times New Roman",serif;font-size:11px}
+.currently-credit{font-size:10px}
+.currently-track{font-size:10px;line-height:1.5;text-decoration:underline dotted;text-underline-offset:2px}
+.currently-muted{color:#777;font-size:9px}
+.currently-status{display:block;color:#777;font:9px/1.4 "Courier New",monospace;margin-top:3px}
