@@ -18,27 +18,12 @@
   var convertButton = document.getElementById("ascii-convert");
   var copyButton = document.getElementById("ascii-copy");
   var downloadButton = document.getElementById("ascii-download");
-  var demoButton = document.getElementById("ascii-demo");
   var clearButton = document.getElementById("ascii-clear");
   var imageSource = null;
   var fileBase = "eggseed-ascii";
   var processing = false;
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d", { willReadFrequently: true });
-  var sample = [
-    "         .-~~~~-.          ",
-    "      __/ ______ \\__       ",
-    "  .--/_____________\\--.   ",
-    "       |  o  o  |          ",
-    "       |    ^   |          ",
-    "        \\  _   /           ",
-    "        /|___|\\            ",
-    "      _/ /   \\ \\_          ",
-    "                            ",
-    "    *  C O U N T R Y  *   ",
-    "        45 rpm / 7 in.     "
-  ].join("\n");
-
   function say(message) {
     statusBox.textContent = message;
   }
@@ -213,14 +198,6 @@
   convertButton.addEventListener("click", convert);
   copyButton.addEventListener("click", copyResult);
   downloadButton.addEventListener("click", downloadText);
-  demoButton.addEventListener("click", function () {
-    closeOldImage();
-    convertButton.disabled = true;
-    fileInput.value = "";
-    fileBase = "eggseed-cowboy";
-    output.value = sample;
-    say("cowboy stamp loaded. edit it however you like.");
-  });
   clearButton.addEventListener("click", function () {
     closeOldImage();
     convertButton.disabled = true;
