@@ -50,12 +50,16 @@
 <a class="navrow" href="media.html"><span class="symbol">~</span>magazine scans</a>
 <a class="navrow" href="photos.html"><span class="symbol">*</span>photographs</a>
 <a class="navrow active" href="ascii.html" aria-current="page"><span class="symbol">~</span>ascii maker</a></nav></div></section>
-<section class="panel side-center cowboy-panel"><h2 class="panel-label">meow.</h2><pre class="side-ascii" aria-label="ASCII cat in a little Western hat">       _________
-    __/_______\__
-   /_____________\
-      /\_/\
-     ( o.o )
-      > ^ &lt;</pre></section>
+<section class="panel side-center cowboy-panel"><h2 class="panel-label">meow.</h2><pre class="side-ascii" aria-label="ASCII cat in a cowboy hat">      .----------.
+  ___/   .----.   \___
+ /____________________\
+       /\       /\
+      /  \_____/  \
+     |  o       o  |
+     | ==   ^   == |
+      \   \___/   /
+       '.__   __.'
+           '-'</pre></section>
 </aside>
 <main class="center-col" id="content"><div class="centerframe">
 <h1 class="section-head">ascii maker / workbench</h1>
@@ -65,7 +69,7 @@
   |    [@%#*+=-:. ]      |
   '----------------------'</pre>
 <div class="maker-drop" id="ascii-drop">
-  <label for="ascii-file">[ choose a picture + ]</label>
+  <label for="ascii-file">[ choose picture ]</label>
   <input type="file" id="ascii-file" accept="image/png,image/jpeg,image/webp,image/gif,image/bmp,image/avif">
   <p class="note">drag a picture here, or paste a screenshot. files stay on your device.</p>
 </div>
@@ -79,7 +83,7 @@
   <label class="maker-invert"><input type="checkbox" id="ascii-invert"> invert black &amp; white</label>
 </fieldset>
 <div class="maker-actions"><button type="button" id="ascii-convert" disabled>[ convert ]</button></div>
-<fieldset class="maker-settings maker-text" id="ascii-letter-station"><legend>[ words into ASCII ]</legend><label class="maker-text-label" for="ascii-letter-input">type a phrase:</label><input type="text" id="ascii-letter-input" class="maker-letter-input" maxlength="80" value="" placeholder="HONKY TONK / EGGSEED" autocomplete="off"><div class="maker-actions"><button type="button" id="ascii-letter-convert">[ make big letters + ]</button></div><p class="note">big ASCII lettering appears in the same editable output below. try your favorite country singer or record label.</p></fieldset>
+<fieldset class="maker-settings maker-text" id="ascii-letter-station"><legend>[ words into ASCII ]</legend><label class="maker-text-label" for="ascii-letter-input">type a phrase:</label><input type="text" id="ascii-letter-input" class="maker-letter-input" maxlength="80" value="" placeholder="HONKY TONK / EGGSEED" autocomplete="off"><div class="maker-actions"><button type="button" id="ascii-letter-convert">[ make letters ]</button></div><p class="note">big ASCII lettering appears in the same editable output below. try your favorite country singer or record label.</p></fieldset>
 <div class="maker-result-header"><h2 class="subhead">your ascii / typewriter desk</h2><span class="note">[ you can edit this text ]</span></div>
 <textarea class="maker-output" id="ascii-output" aria-label="Editable ASCII artwork" spellcheck="false" wrap="off" autocapitalize="off" autocomplete="off" autocorrect="off">       .---.
     __/_____\\__
@@ -90,7 +94,7 @@
        /   \\
 
      * HOWDY! *</textarea>
-<div class="maker-actions"><button type="button" id="ascii-copy">[ copy text ]</button><button type="button" id="ascii-download">[ save .txt ]</button><button type="button" id="ascii-clear">[ clear ]</button></div>
+<div class="maker-actions"><button type="button" id="ascii-copy">[ copy ]</button><button type="button" id="ascii-download">[ save .txt ]</button><button type="button" id="ascii-clear">[ clear ]</button></div>
 <p class="note" role="status" aria-live="polite" id="ascii-status">ready.</p>
 <div class="stamp-strip">* * *  country 45s / little pictures / text magic  * * *</div>
 <p class="note">images are processed here on your device. copy or save the resulting plain text.</p>
