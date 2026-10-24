@@ -237,3 +237,43 @@
   }
   updateIndicators();
 }());
+
+/* Word lettering and screenshot-paste extension. No network requests. */
+(function(){
+"use strict";
+var input=document.getElementById("ascii-letter-input");
+var button=document.getElementById("ascii-letter-convert");
+var output=document.getElementById("ascii-output");
+var status=document.getElementById("ascii-status");
+var imageInput=document.getElementById("ascii-file");
+var chars={"0":[".@@.","@..@","@..@","@..@",".@@."],"1":[".@.","@@.","..@.","..@.","@@@"],"2":["@@@.","...@",".@@.","@...","@@@@"],"3":["@@@.","...@",".@@.","...@","@@@."],"4":["@..@","@..@","@@@@","...@","...@"],"5":["@@@@","@...","@@@.","...@","@@@."],"6":[".@@@","@...","@@@.","@..@",".@@."],"7":["@@@@","...@","..@.",".@..",".@.."],"8":[".@@.","@..@",".@@.","@..@",".@@."],"9":[".@@.","@..@",".@@.","...@",".@@."],"A":[".@@.","@..@","@@@@","@..@","@..@"],"B":["@@@.","@..@","@@@.","@..@","@@@."],"C":[".@@@","@...","@...","@...",".@@@"],"D":["@@@.","@..@","@..@","@..@","@@@."],"E":["@@@@","@...","@@@.","@...","@@@@"],"F":["@@@@","@...","@@@.","@...","@..."],"G":[".@@@","@...","@.@@","@..@",".@@@"],"H":["@..@","@..@","@@@@","@..@","@..@"],"I":["@@@","..@.","..@.","..@.","@@@"],"J":["..@@","...@","...@","@..@",".@@."],"K":["@..@","@.@.","@@..","@.@.","@..@"],"L":["@...","@...","@...","@...","@@@@"],"M":["@...@","@@.@@","@.@.@","@...@","@...@"],"N":["@...@","@@..@","@.@.@","@..@@","@...@"],"O":[".@@.","@..@","@..@","@..@",".@@."],"P":["@@@.","@..@","@@@.","@...","@..."],"Q":[".@@.","@..@","@..@","@.@@",".@@@"],"R":["@@@.","@..@","@@@.","@.@.","@..@"],"S":[".@@@","@...",".@@.","...@","@@@."],"T":["@@@@@","..@..","..@..","..@..","..@.."],"U":["@..@","@..@","@..@","@..@",".@@."],"V":["@...@","@...@","@...@","..@.@.","..@.."],"W":["@...@","@...@","@.@.@","@@.@@","@...@"],"X":["@...@","..@.@.","..@..","..@.@.","@...@"],"Y":["@...@","..@.@.","..@..","..@..","..@.."],"Z":["@@@@","...@","..@.",".@..","@@@@"],"!":["@","@","@"," ","@"],"?":["@@@.","...@",".@@.","....",".@.."],".":[" "," "," "," ","@"],"-":["    ","    ","@@@@","    ","    "],"/":["...@","..@.",".@..","@...","...."]," ":["  ","  ","  ","  ","  "],"&":[".@@.","@.@.","..@.","@.@@",".@@@"],"@":[".@@@.","@...@","@.@@@","@....",".@@@."]};
+function letterArt(){
+var value=input.value.toUpperCase().replace(/[^A-Z0-9!?\.\/&@ -]/g,"?").trim();
+if(!value){status.textContent="type a phrase first.";return;}
+var rendered=[];
+for(var offset=0;offset<value.length;offset+=12){
+ var chunk=value.slice(offset,offset+12).split("");
+ for(var row=0;row<5;row++){
+  rendered.push(chunk.map(function(letter){var cells=chars[letter]||chars["?"];return cells[row].replace(/@/g,"#").replace(/\./g," ");}).join("  ").replace(/\s+$/,""));
+ }
+ if(offset+12<value.length)rendered.push("");
+}
+output.value=rendered.join("\n");
+status.textContent="word art ready. edit, copy, or save it below.";
+output.focus();
+}
+button.addEventListener("click",letterArt);
+input.addEventListener("keydown",function(event){if(event.key==="Enter"){event.preventDefault();letterArt();}});
+document.addEventListener("paste",function(event){
+ if(!event.clipboardData||!event.clipboardData.items)return;
+ var imageItem=Array.from(event.clipboardData.items).find(function(item){return item.kind==="file"&&item.type.indexOf("image/")===0;});
+ if(!imageItem)return;
+ var image=imageItem.getAsFile();
+ if(!image)return;
+ try{
+  var transfer=new DataTransfer();transfer.items.add(image);imageInput.files=transfer.files;
+  imageInput.dispatchEvent(new Event("change",{bubbles:true}));
+  event.preventDefault();
+ }catch(error){status.textContent="paste unavailable here; save the screenshot and choose it above.";}
+});
+}());
