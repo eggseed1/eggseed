@@ -338,192 +338,94 @@ body{
 .currently-status{display:block;color:#777;font:9px/1.4 "Courier New",monospace;margin-top:3px}
 
 
-/* Detailed two-horse background, reconstructed as editable ASCII characters
-   from the user-provided reference (not a raster background). */
-.horse-parade { display:none !important; }
-body::before {
-  content:"                                                                                                           ,.                                                ,.   .\A                                                                                                       . ;.  +                                              : :+:  +.\A                                                              *@#@@ .    @%%..@@  ;+                    *%#;, .@%,:*+                                 .    %#@%@%@%.\A                                                          ;@@@@@@@@@@@@@@@@@##@@@@,            ;#          +@%       @                         @,    @%#@% @@@@@@@.:;#\A                                                        **%%@%%%#@#@##@##@#*.,# @#,                 *%@#.                              .%#%@** *@%%*.#*#@#%@#%#%% *.\A                                                        .   #*++*; #**+#+#;+;#+ ..,:                             ,.          .     ,    .;. ,;+*+%*+* +**+*%**++*;#::;: :\A                                                            +#*+++.%#*##*@%##*;.  ,:               .             ;           :    ;+;, ..+..;#@#*##*%.**#*%@##*#%%*%#*.;\A                                                             @#+*%*%%##%*@#%*+ %@  ,*           *% %:      ,,   **.     .:        @#%###%#%*@*@#%###%%%*%*%@#%*%#%#%*%*@\A                                                           ;@@@@@@@@@@@@@@@@:  @@@, .        .            :             +*     ,.,@@@@@@@%++@@@@@@@@@@@@@@@@@@@@@@@@++@@@..\A                                                        . ,#@%%%#@#@%%%@#@%@#* @@%#+      , @#%;           ;+       +             *#@@@%%%##@#@#%%%%@%%#@#@@#@%%%@%@#@#@#@;,*\A                        ;+;*;++*;;   :*;+;+;+++++      ++;**%##**#*%#**#*%*#**; %***;      *@#,            :*;:            +         ,+##+#*#*%*#***%##***#%*#:  #*#*#*%*+*:\A                      .,#**#*%#,*+,,.;***#%#*##*#,.....%**#*%#***#*%#*##*%#**#*.%***,      #++,            :#+;,..    .    ;,....,,..;*#%***#*@**#**%%**#*#%*;.  ;;;:+*%*++;.\A                     .*%#%*%*%#**%*%#:,%%*%%*##*%#%+%*%%%*%*%#%#*%*%%*#%*%#%+%*#%%*; +     % *,            ;###%#%,         #%*%*#%##*##%#%*%*@###*#%%%*%*#@#.       ,*%#;;**#\A                  +*@@%@@@@% @@@%@% .%@@@@@@@@@%@@@%@@@@@%@@@@@@@@@@@@@@%@     @@@@@@     ,@              @@@% @@@@@@   +@%  %@@%@@@@@@@@@@@@@@@@@@@@@@@@%@@+           @@@@%\A             ;,  @@%@@#@%@:,%@@@%*  @@%%@%@@%@@#@%@%@#@@@%@%@@@@%@%@@%@@#@       #%@%@ #. ;               #, . @%@%@%@#,    @@%@#@@%@%@@@%@%@%@%@@@%@@@:;#@*%,\A      .   ,*%,  # ##%%#@%%*%%@%%,  %%%##@%@%#%%#@%%:,%@@%#%%@%%%#@%@%##%%@*.      :%%@#.              .*    .#  *%*@%@*#*##%%%#@#%@#%#%@%%%*@%@#%%%%@%%%%# @\A     ,.    #;   .:++*+;#*,:++#*+   #*+++++#++*+;#*+,:.**++*;#*+++;.#,:,:;#,        ,.,,                .       .,;+++#++**;**+++;*#++++**+++++#:;:..*,.,;.,*\A     *     +;   ,@%*#%#@% ,##@%%. ,#%%#*%#@%*#%#@%%+* *@%*%#@%%#** #,::+##                                       ++%#@%##%#%%%*%#%@%#*%%%%%*%#@*#, .#  :+,%@ ,\A              :@%@@%@@#@%*;@#@@@%+ %%@%%@%@@%@@#@%@%*  @@%@%@@@%%@% .,#@*  :                             ,        :@%@%@%@%@@@%@#@@%@%%@@%@%@%@%@::*   ;@#@@+#:\A        :%@@@@@@@@@%@%*@  :# @@@%@%@ #@%@@@@%@@%@@@%@% @@%@%@@@@%@% @%@@%@               :#                       :@%@%@@@%@@@%@%@@@@%@@@@@%@%@%@@@#       ,%.\A  ,@@@   ,@#@%%@#@@:,+   *%:  +##@#@%@%%@#@%%@@#@%@#@#@ ##@#@%%%%@#  ,,,#@#.                              .:,     :#+@#%%@#@%%#@%@#@%%%%%%#@#@#%%%%@   ,* @#  +\A    .; ,#+@ *:.;  *.   ,        :%#@#%#*%#%%*##*@#%*%#%*#*##@%%#**@  ,:;#@ ;;;              #              ,: , .   ;@.;###%#%*#*%@#%*#%%#%*%#@.;###%# ,++*@+*+***+,\A    .,..:,;. . .  .,            ,*+%#**;::;:;**+%*+****%:;*+#:::;**,;*:++%;:;;.,            ;.             :;., .    ;..:;+##***+*%***+##****+;.:::,#++;;,*%**+*:#*;,..\A                                :%*%#%*,    ;##*%##*%*#%,:%*%   ,%*%%+%#*%# ,%*#             *.     *. .   ;#+           .*%#%*%*#%##*##%#%*%* #.  ,##%*%*#%###*,%#%*%*\A                              @@@@@@@@,             #@@@@%*;@@@,  @ @@@@%@@@:  @@@@*.         .        +@   :%+                :@@@@@@@@@@@%@@@@@@*               ;@@@%\A                           ,#@@@%@#@%@                      @@@%%* @      %@%@# @%,   @%@%@%@%@##;          :%@@%@;  @    .                   @%@@; @ #,           #%@#\A                           .%@%%+*%@%#.                       *%#* @%.    %%*@## #+,   *#:;         +*%*     .@%. ,%*@;                          ;##@ *,           *#@#\A                            *%*,  .,**:.                      ..;++#+:.  ;****+, +,:.  ,,..         .... ;    ,#:  ..,:::;,                       ..,+*,.,         +*+;\A                            +%*     ***:                        ,*+%#+;. %#*;*;  +  *,  +,,              :     %:     +++**                  +       *#,;*         *+*;\A                            #@        +%@%                         @@,   @%.       :%@@ *%*                ;+  @%@:     :@#,,              :@#@%@@@@@ *@@# @      ,#%@#\A                            :@         +@@@@,                   :@@@@@@@%             .%@:,@                 .  ,#%@@      @@ ;*  :              +@@@@@@@%@     @@@@@*\A                          .%#@           .@%#+           :@%@%%%#@#@%@;                 *#@#                 ;    ,@#           .  @,                           %@%%:\A                           **#            #**+;         :+*+#******..                    ,.*+:;,                                  +                              %.\A                        .,;##%            %#**,         ;:+;++;;;+;                       ,;@;;,                                  @.    .                        *\A                        #%*@*%            %%#;                                              @,+,            ,* :                  @#;   %\A                       @@@@@@                                                                @@@* %       :                        @@@%\A                        #%#*                                                                              ##@%@";
-  position:fixed;
-  top:43%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  display:block;
-  width:max-content;
-  max-width:none;
-  white-space:pre;
-  font:clamp(5.3px,0.79vw,10.8px)/1.06 "Courier New",monospace;
-  letter-spacing:0;
-  text-align:left;
-  color:#080808;
-  opacity:.30;
-  pointer-events:none;
-  user-select:none;
-  z-index:0;
-  animation:horse-duo-drift 16s ease-in-out infinite alternate;
-}
-@keyframes horse-duo-drift {
-  from { transform:translate(calc(-50% - 15px), calc(-50% + 4px)); }
-  to { transform:translate(calc(-50% + 15px), calc(-50% - 4px)); }
-}
-.panel,.centerframe,.minibox,.greeting,.maker-entry,.maker-drop,.maker-settings,.gallery-tile {
-  background:rgba(255,255,255,.94);
-}
-@media(max-width:680px){
- body::before {font-size:5px;opacity:.16;top:48%}
-}
-@media(prefers-reduced-motion:reduce){
- body::before{animation:none}
-}
 
-/* Small handwritten-web welcome heading. */
-.home-page .greeting h2{font:italic 700 14px/1.35 Georgia,"Times New Roman",serif;text-align:center;margin:0 0 7px}
-.home-page .greeting p{margin:0}
-
-
-/* 2026 / GALLoping ASCII wallpaper. The ornament is a plain text
-   reconstruction of the supplied fleur-de-lis, not an image asset.
-   Two large detailed ASCII horses actually traverse the viewport. */
-:root {
-  --eggseed-fleur: "                                @\A                                 %\A                                @%\A                               @@%@@\A                               @@%@\A                               %@%%@\A                               %@%@@\A                           @   %@ @@\A                          %@@@ %  @@  @%@@\A                           @%@@@@ @@@@%\A                            @@@@@@@@@@@\A              @            @%@@%@@@@%@%\A              @         @@   @@%@@@@%@   @          @\A              @@       @@@     %@%@@   @@%@@       @\A             @ @@@@    @@%%@@  %@ @@  @%@@@      @@@\A               @%@%@@@@@      @@@ @@@ @   @@  @@@@@@\A             @@@@@@@@@@@  @ @@@@@%@  @    @@@@  @@@  @  @\A     @@@%%%%@%%%@ %@@@@@@@@@@ @%@%%@@ @%@@@@@@@ @@@@%%%@@@@@\A               @%@%@%@@%@@@@%@@@@@@ @@@@@%@%%@%@  @@\A             @ @%@%@@@@%    @%@%@ @@%@@   @%@ %@@%@@\A              @%@@      @@@@@  %@@@@  @ @       @@@%\A              @@       @@@%    %@%@@   @@@         @\A             @          @@   @@%@@@@%  @ %          @\A                            %@@%@@@@%@@\A                           @@@@%@@@@%@%@\A                            @@@%@@@@%@@\A                            @@@@@@@@%@@\A                          @@%%@%@@@@@@%@\A                          @@@  %@%@@  @@\A                               % @%@\A                              @%@@@@@\A                              @%@%@@@\A                               %@%@@\A                               %@%@@\A                              @%@@@@\A                               %@@@@\A                               %@%@@\A                               @@%@@\A                               @@%@\A                               %@%@@\A                                @%@\A                               @@%@\A                                @%\A                                 %";
-  --eggseed-horses: "                                                                                                           ,.                                                ,.   .\A                                                                                                       . ;.  +                                              : :+:  +.\A                                                              *@#@@ .    @%%..@@  ;+                    *%#;, .@%,:*+                                 .    %#@%@%@%.\A                                                          ;@@@@@@@@@@@@@@@@@##@@@@,            ;#          +@%       @                         @,    @%#@% @@@@@@@.:;#\A                                                        **%%@%%%#@#@##@##@#*.,# @#,                 *%@#.                              .%#%@** *@%%*.#*#@#%@#%#%% *.\A                                                        .   #*++*; #**+#+#;+;#+ ..,:                             ,.          .     ,    .;. ,;+*+%*+* +**+*%**++*;#::;: :\A                                                            +#*+++.%#*##*@%##*;.  ,:               .             ;           :    ;+;, ..+..;#@#*##*%.**#*%@##*#%%*%#*.;\A                                                             @#+*%*%%##%*@#%*+ %@  ,*           *% %:      ,,   **.     .:        @#%###%#%*@*@#%###%%%*%*%@#%*%#%#%*%*@\A                                                           ;@@@@@@@@@@@@@@@@:  @@@, .        .            :             +*     ,.,@@@@@@@%++@@@@@@@@@@@@@@@@@@@@@@@@++@@@..\A                                                        . ,#@%%%#@#@%%%@#@%@#* @@%#+      , @#%;           ;+       +             *#@@@%%%##@#@#%%%%@%%#@#@@#@%%%@%@#@#@#@;,*\A                        ;+;*;++*;;   :*;+;+;+++++      ++;**%##**#*%#**#*%*#**; %***;      *@#,            :*;:            +         ,+##+#*#*%*#***%##***#%*#:  #*#*#*%*+*:\A                      .,#**#*%#,*+,,.;***#%#*##*#,.....%**#*%#***#*%#*##*%#**#*.%***,      #++,            :#+;,..    .    ;,....,,..;*#%***#*@**#**%%**#*#%*;.  ;;;:+*%*++;.\A                     .*%#%*%*%#**%*%#:,%%*%%*##*%#%+%*%%%*%*%#%#*%*%%*#%*%#%+%*#%%*; +     % *,            ;###%#%,         #%*%*#%##*##%#%*%*@###*#%%%*%*#@#.       ,*%#;;**#\A                  +*@@%@@@@% @@@%@% .%@@@@@@@@@%@@@%@@@@@%@@@@@@@@@@@@@@%@     @@@@@@     ,@              @@@% @@@@@@   +@%  %@@%@@@@@@@@@@@@@@@@@@@@@@@@%@@+           @@@@%\A             ;,  @@%@@#@%@:,%@@@%*  @@%%@%@@%@@#@%@%@#@@@%@%@@@@%@%@@%@@#@       #%@%@ #. ;               #, . @%@%@%@#,    @@%@#@@%@%@@@%@%@%@%@@@%@@@:;#@*%,\A      .   ,*%,  # ##%%#@%%*%%@%%,  %%%##@%@%#%%#@%%:,%@@%#%%@%%%#@%@%##%%@*.      :%%@#.              .*    .#  *%*@%@*#*##%%%#@#%@#%#%@%%%*@%@#%%%%@%%%%# @\A     ,.    #;   .:++*+;#*,:++#*+   #*+++++#++*+;#*+,:.**++*;#*+++;.#,:,:;#,        ,.,,                .       .,;+++#++**;**+++;*#++++**+++++#:;:..*,.,;.,*\A     *     +;   ,@%*#%#@% ,##@%%. ,#%%#*%#@%*#%#@%%+* *@%*%#@%%#** #,::+##                                       ++%#@%##%#%%%*%#%@%#*%%%%%*%#@*#, .#  :+,%@ ,\A              :@%@@%@@#@%*;@#@@@%+ %%@%%@%@@%@@#@%@%*  @@%@%@@@%%@% .,#@*  :                             ,        :@%@%@%@%@@@%@#@@%@%%@@%@%@%@%@::*   ;@#@@+#:\A        :%@@@@@@@@@%@%*@  :# @@@%@%@ #@%@@@@%@@%@@@%@% @@%@%@@@@%@% @%@@%@               :#                       :@%@%@@@%@@@%@%@@@@%@@@@@%@%@%@@@#       ,%.\A  ,@@@   ,@#@%%@#@@:,+   *%:  +##@#@%@%%@#@%%@@#@%@#@#@ ##@#@%%%%@#  ,,,#@#.                              .:,     :#+@#%%@#@%%#@%@#@%%%%%%#@#@#%%%%@   ,* @#  +\A    .; ,#+@ *:.;  *.   ,        :%#@#%#*%#%%*##*@#%*%#%*#*##@%%#**@  ,:;#@ ;;;              #              ,: , .   ;@.;###%#%*#*%@#%*#%%#%*%#@.;###%# ,++*@+*+***+,\A    .,..:,;. . .  .,            ,*+%#**;::;:;**+%*+****%:;*+#:::;**,;*:++%;:;;.,            ;.             :;., .    ;..:;+##***+*%***+##****+;.:::,#++;;,*%**+*:#*;,..\A                                :%*%#%*,    ;##*%##*%*#%,:%*%   ,%*%%+%#*%# ,%*#             *.     *. .   ;#+           .*%#%*%*#%##*##%#%*%* #.  ,##%*%*#%###*,%#%*%*\A                              @@@@@@@@,             #@@@@%*;@@@,  @ @@@@%@@@:  @@@@*.         .        +@   :%+                :@@@@@@@@@@@%@@@@@@*               ;@@@%\A                           ,#@@@%@#@%@                      @@@%%* @      %@%@# @%,   @%@%@%@%@##;          :%@@%@;  @    .                   @%@@; @ #,           #%@#\A                           .%@%%+*%@%#.                       *%#* @%.    %%*@## #+,   *#:;         +*%*     .@%. ,%*@;                          ;##@ *,           *#@#\A                            *%*,  .,**:.                      ..;++#+:.  ;****+, +,:.  ,,..         .... ;    ,#:  ..,:::;,                       ..,+*,.,         +*+;\A                            +%*     ***:                        ,*+%#+;. %#*;*;  +  *,  +,,              :     %:     +++**                  +       *#,;*         *+*;\A                            #@        +%@%                         @@,   @%.       :%@@ *%*                ;+  @%@:     :@#,,              :@#@%@@@@@ *@@# @      ,#%@#\A                            :@         +@@@@,                   :@@@@@@@%             .%@:,@                 .  ,#%@@      @@ ;*  :              +@@@@@@@%@     @@@@@*\A                          .%#@           .@%#+           :@%@%%%#@#@%@;                 *#@#                 ;    ,@#           .  @,                           %@%%:\A                           **#            #**+;         :+*+#******..                    ,.*+:;,                                  +                              %.\A                        .,;##%            %#**,         ;:+;++;;;+;                       ,;@;;,                                  @.    .                        *\A                        #%*@*%            %%#;                                              @,+,            ,* :                  @#;   %\A                       @@@@@@                                                                @@@* %       :                        @@@%\A                        #%#*                                                                              ##@%@";
+/* Eggseed wallpaper: fine pale dots + original multi-frame ASCII horse.
+   Inspired by frame-by-frame Muybridge motion. No image or JS animation. */
+body {
+  background-color:#fff !important;
+  background-image:radial-gradient(circle,rgba(0,0,0,.105) .85px,transparent 1.12px) !important;
+  background-repeat:repeat !important;
+  background-size:32px 32px !important;
+  background-position:4px 4px !important;
+  background-blend-mode:normal !important;
 }
-body{
-  background-color:#fafafa;
-  background-image:
-    radial-gradient(#d1d1d1 0.55px,transparent 0.65px),
-    repeating-linear-gradient(45deg,transparent 0 52px,rgba(0,0,0,.016) 52px 53px),
-    repeating-linear-gradient(-45deg,transparent 0 52px,rgba(0,0,0,.016) 52px 53px);
-  background-size:11px 11px,105px 105px,105px 105px;
-}
-body::before{
-  top:44%;
-  left:0;
-  font:clamp(6px,.82vw,11px)/1.04 "Courier New",monospace;
-  color:#111;
-  opacity:.39;
-  z-index:0;
-  transform:translate3d(-100%,0,0);
-  will-change:transform;
-  animation:eggseed-horses-running 32s linear infinite -11s;
-}
-@keyframes eggseed-horses-running{
-  0%  {transform:translate3d(calc(-100% - 5vw),5px,0)}
-  12.5%{transform:translate3d(calc(-75% + 6vw),-5px,0)}
-  25%{transform:translate3d(calc(-50% + 12vw),4px,0)}
-  37.5%{transform:translate3d(calc(-25% + 18vw),-6px,0)}
-  50%{transform:translate3d(28vw,5px,0)}
-  62.5%{transform:translate3d(49vw,-6px,0)}
-  75%{transform:translate3d(70vw,5px,0)}
-  87.5%{transform:translate3d(90vw,-6px,0)}
-  100%{transform:translate3d(110vw,5px,0)}
+body::before,body::after {
+  content:none !important;
+  animation:none !important;
+  display:none !important;
 }
 .horse-parade{
-  display:block!important;
-  position:fixed;
-  inset:0;
-  overflow:hidden;
-  z-index:0;
-  pointer-events:none;
-  background:transparent;
+  display:block !important;
+  position:fixed !important;
+  inset:0 !important;
+  overflow:hidden !important;
+  z-index:0 !important;
+  background:transparent !important;
+  pointer-events:none !important;
+  visibility:visible !important;
 }
-.horse-parade > .running-horse{display:none!important}
-.horse-parade::before{
-  content:var(--eggseed-horses);
+.horse-parade > .running-horse{display:none !important}
+.horse-parade::before,.horse-parade::after{
+  content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A       /  /             _/  /\A      /  /           _/  _/\A     /__/           /____/";
+  display:block;
   position:absolute;
-  top:74%;
   left:0;
-  color:#111;
-  opacity:.17;
-  font:clamp(5px,.50vw,7.5px)/1.05 "Courier New",monospace;
-  letter-spacing:0;
-  white-space:pre;
   width:max-content;
-  pointer-events:none;
-  animation:eggseed-horses-running 43s linear infinite -30s;
-}
-body::after,
-.horse-parade::after{
-  content:var(--eggseed-fleur);
-  position:fixed;
-  top:80px;
-  left:max(11px,calc(50% - 568px));
-  width:max-content;
-  height:auto;
+  height:max-content;
   margin:0;
   padding:0;
-  background:transparent;
-  color:#080808;
-  font:700 7.7px/1.02 "Courier New",monospace;
+  border:0;
   white-space:pre;
-  text-align:left;
   letter-spacing:0;
+  text-align:left;
+  color:#151515;
+  font:clamp(9px,1.08vw,15px)/1.05 "Courier New",monospace;
   opacity:.34;
   pointer-events:none;
-  user-select:none;
-  z-index:0;
-  transform:none;
-  animation:none;
-}
-.horse-parade::after{
-  top:330px;
-  left:auto;
-  right:max(10px,calc(50% - 570px));
-  font-size:6.8px;
-  opacity:.27;
-  transform:scaleX(-1);
-}
-.panel,.centerframe,.minibox,.greeting,.maker-entry,.maker-drop,.maker-settings,.gallery-tile{
-  background:rgba(255,255,255,.965);
-}
-@media(max-width:900px){
-  body::after,.horse-parade::after{opacity:.15;font-size:5.5px}
-  body::before{opacity:.25}
-  .horse-parade::before{opacity:.10}
-}
-@media(max-width:680px){
-  body::after,.horse-parade::after{font-size:4px;opacity:.11}
-  body::after{left:-45px;top:110px}
-  .horse-parade::after{right:-30px;top:62vh}
-  body::before{font-size:5.5px;top:37%;opacity:.20}
-  .horse-parade::before{font-size:5px;opacity:.09}
-}
-@media(prefers-reduced-motion:reduce){
-  body::before,.horse-parade::before{animation:none!important;transform:translate3d(0,0,0)!important}
-}
-
-
-/* Two independent motion tracks: long cross-screen travel and a fast
-   0.55s gallop cadence. Both operate entirely in CSS. */
-body::before{
-  translate:0 0;
-  transform:none;
-  animation:
-    eggseed-crossing 32s linear infinite -11s,
-    eggseed-hooves .55s ease-in-out infinite;
+  will-change:transform;
+  transform:translateX(-100%);
 }
 .horse-parade::before{
-  translate:0 0;
-  transform:none;
-  animation:
-    eggseed-crossing 41s linear infinite -29s,
-    eggseed-hooves .58s ease-in-out infinite reverse;
+  top:24%;
+  animation:eggseed-horse-pose .88s steps(1,end) infinite,
+            eggseed-horse-run 22s linear infinite -8.5s;
 }
-@keyframes eggseed-crossing{
-  0%{translate:calc(-100% - 5vw) 0}
-  100%{translate:110vw 0}
+.horse-parade::after{
+  top:70%;
+  font-size:clamp(8px,.76vw,12px);
+  opacity:.24;
+  animation:eggseed-horse-pose .88s steps(1,end) infinite -.42s,
+            eggseed-horse-run 28s linear infinite -20s;
 }
-@keyframes eggseed-hooves{
-  0%,100%{transform:translateY(3px)}
-  50%{transform:translateY(-4px)}
+@keyframes eggseed-horse-pose{
+0.00%,12.49%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A       /  /             _/  /\A      /  /           _/  _/\A     /__/           /____/"}
+12.50%,24.99%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A        \\  \\              \\  \\\A         \\  \\__         __\\  \\\A          \\____\\       /______\\"}
+25.00%,37.49%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A        /  /           /   /\A     __/  /         _/  _/\A    /____/         /____/"}
+37.50%,49.99%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A        \\  \\          /  /\A         \\__\\       __/  /\A         /  /      /____/\A        /__/"}
+50.00%,62.49%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A      /  /             \\  \\\A     /  /           ____\\  \\\A  __/  /           /_______\\\A /____/"}
+62.50%,74.99%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A        \\  \\             / /\A         \\  \\_        _/ /\A          \\___\\      /__/"}
+75.00%,87.49%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A       /  /          /  /\A     _/  /         _/  /\A    /___/         /___/"}
+87.50%,100.00%{content:"                      ,/|___\A          __..---..__  /  o  '-.\A    _..-''           '--.     _/\A  .-'       __          _'--''\A /     __.-'  '--..__.-'  \\_\A '---'                     \\\A        \\   \\          \\   \\\A         \\   \\__        \\   \\_\A          \\_____\\       \\_____\\"}
+}
+@keyframes eggseed-horse-run{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(calc(100vw + 55px))}
+}
+@media(max-width:680px){
+  .horse-parade::before{top:29%;font-size:8px;opacity:.20}
+  .horse-parade::after{top:78%;font-size:7px;opacity:.15}
 }
 @media(prefers-reduced-motion:reduce){
-  body::before,.horse-parade::before{
-    animation:none!important;
-    translate:0 0;
-    transform:none;
+  .horse-parade::before,.horse-parade::after{
+    animation:none !important;
+    transform:translateX(3vw);
   }
 }
-
+.home-page .greeting h2{
+  font:italic 700 14px/1.35 Georgia,"Times New Roman",serif;
+  text-align:center;margin:0 0 7px;
+}
+.home-page .greeting p{margin:0}
 
 /* Compact ASCII fish from the supplied art, replacing the welcome horse. */
 .home-page .home-fish{
