@@ -281,3 +281,34 @@ body{
 }
 @media(max-width:360px){.home-page .double-mini{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.running-horse{animation:none!important}}
+
+
+/* The homepage ASCII Maker lives in the left sidebar, not the main column. */
+.home-page .ascii-side-panel{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  text-align:center;
+  min-width:0;
+}
+.home-page .ascii-side-panel .panel-label{margin:0 0 3px}
+.home-page .ascii-side-panel .machine-stamp{
+  font:9px/1.08 "Courier New",monospace;
+  white-space:pre;
+  text-align:center;
+  margin:3px 0;
+  max-width:100%;
+}
+.home-page .ascii-side-panel p{
+  font-size:10px;
+  line-height:1.48;
+  margin:2px 0 5px;
+}
+.home-page .ascii-side-panel .button-small{
+  font:9px/1.5 "Courier New",monospace;
+  padding:3px 5px;
+  max-width:100%;
+  white-space:normal;
+}
