@@ -9,7 +9,7 @@ const files = [
   "index.html", "about.html", "blog.html", "reviews.html", "archive.html",
   "45rpm.html", "media.html", "photos.html", "ascii.html",
   "reviews/hard-to-love-a-man.html",
-  ...Array.from({ length: 6 }, (_, i) => "records/" + String(i + 1).padStart(3, "0") + ".html")
+  ...Array.from({ length: 34 }, (_, i) => "records/" + String(i + 1).padStart(3, "0") + ".html")
 ];
 const toggle = 'id="eggseed-mobile-size"';
 for (const file of files) {
@@ -35,4 +35,4 @@ for (const breakpoint of [609,539,479,419,369,324]) {
   assert.ok(css.includes("@media(max-width:" + breakpoint + "px)"),
     "Missing fit breakpoint " + breakpoint);
 }
-console.log("Mobile layout OK: 16 pages preserve 3 columns; fit-to-screen + full-size pan available.");
+console.log("Mobile layout OK: 44 pages preserve 3 columns; fit-to-screen + full-size pan available.");

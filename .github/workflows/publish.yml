@@ -33,6 +33,7 @@ jobs:
           node --check ascii-maker.js
           node scripts/test-ascii-maker.cjs
           node scripts/test-mobile-layout.cjs
+          node scripts/test-record-collection.cjs
           node scripts/test-lastfm-publish.cjs
       - name: Update recent Last.fm text
         env:

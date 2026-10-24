@@ -922,3 +922,82 @@ body::before,body::after {
   margin:0;
   overflow-wrap:break-word;
 }
+
+
+/* Imported original 45rpm collection: photographic cabinet, compact labels. */
+.record-gallery .record-import-tile{min-width:0}
+.record-import-tile .record-thumbnail-link{text-decoration:none}
+.record-import-tile .record-photo-wrap{
+  display:block;position:relative;width:100%;aspect-ratio:1;
+  border:1px solid #aaa;background:#f3f3f3;overflow:hidden;
+}
+.record-import-tile .record-photo-wrap img{
+  position:absolute;inset:0;display:block;width:100%;height:100%;
+  object-fit:cover;filter:grayscale(1);border:0;background:transparent;color:transparent;
+}
+.record-import-tile .record-thumbnail-fallback{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font:9px/1.4 "Courier New",monospace;color:#555;text-align:center;padding:8px;
+}
+.record-import-tile .record-grid-id{
+  margin-top:5px;font:700 10px/1.35 Georgia,"Times New Roman",serif;
+  text-decoration:underline dotted;text-underline-offset:2px;
+  overflow-wrap:anywhere;
+}
+.record-import-tile .record-grid-caption{margin-top:3px;color:#555;overflow-wrap:anywhere}
+.record-import-tile .record-grid-date{
+  display:block;margin-top:4px;color:#888;
+  font:8px/1.3 "Courier New",monospace;
+}
+.record-import-tile a:hover img{filter:none}
+.record-import-tile a:hover{background:transparent}
+.record-import-tile a:hover .record-grid-id{text-decoration:underline}
+.record-detail-page.record-imported .section-head{
+  font:700 13px/1.35 Georgia,"Times New Roman",serif;
+  overflow-wrap:anywhere;
+}
+.record-imported .record-detail-title{
+  font:italic 11px/1.45 Georgia,"Times New Roman",serif;
+  text-align:center;margin:8px 0 13px;overflow-wrap:anywhere;
+}
+.record-imported-figure{margin:0 auto 14px;width:100%;text-align:center}
+.record-detail-photo{
+  position:relative;
+  width:min(100%,265px);margin:0 auto;aspect-ratio:1;overflow:hidden;
+  background:#f3f3f3;border:1px solid #aaa;
+}
+.record-detail-photo img{
+  position:absolute;inset:0;width:100%;height:100%;display:block;
+  object-fit:contain;background:transparent;color:transparent;
+}
+.record-photo-fallback{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;text-align:center;font:10px/1.6 "Courier New",monospace;
+  padding:9px;color:#666;
+}
+.record-photo-fallback a{display:inline}
+.record-imported-figure figcaption{margin-top:5px;color:#666;font:9px/1.4 "Courier New",monospace}
+.record-more-photos{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  width:min(100%,265px);gap:5px;margin:7px auto 0;
+}
+.record-alt-photo{display:block;min-width:0;aspect-ratio:1;border:1px dotted #aaa;background:#f5f5f5}
+.record-alt-photo img{width:100%;height:100%;display:block;object-fit:cover}
+.record-imported .record-fields h2{font:700 12px/1.4 Georgia,"Times New Roman",serif}
+.record-imported .record-fields dl>div{grid-template-columns:38% minmax(0,1fr);column-gap:3px}
+.record-imported .record-research{margin:12px 0}
+.record-imported .record-research p{
+  font:10px/1.6 "Trebuchet MS",Tahoma,sans-serif;color:#555;overflow-wrap:anywhere
+}
+.record-imported .record-source-links{
+  display:flex;flex-wrap:wrap;gap:4px 10px;
+  font:9px/1.6 "Courier New",monospace;
+}
+.record-imported .record-collection-notes{margin:14px 0}
+.record-imported .record-collection-notes p{
+  font:10px/1.65 "Trebuchet MS",Tahoma,sans-serif;margin:0 0 10px;overflow-wrap:anywhere
+}
+.record-imported .record-imported-date{
+  margin:12px 0 4px;color:#777;text-align:center;
+  font:9px/1.4 "Courier New",monospace
+}
