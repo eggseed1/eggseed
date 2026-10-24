@@ -495,3 +495,110 @@ body::before,body::after {
 @media(max-width:420px){
   .home-page .home-fish{font-size:5.3px}
 }
+
+
+/* October archive update — subtle ASCII navigation, dated blog index,
+   and photo-first clickable record cabinet. */
+.navbox .navrow::before{
+  content:"+";
+  display:inline-block;
+  width:13px;
+  margin-right:4px;
+  color:#777;
+  font:10px/1 "Courier New",monospace;
+  text-align:center;
+}
+.navbox .navrow.active::before{content:">";color:#111;font-weight:bold}
+.navbox .navrow:hover::before{color:inherit}
+.centerframe::after{
+  content:none!important;
+  display:none!important;
+}
+.centerframe{padding-bottom:11px!important}
+
+/* Old-web blog: month heading + compact date/title rows, not cards. */
+.blog-index .section-head{margin-bottom:8px}
+.blog-intro{text-align:center;padding:3px 0 9px;border-bottom:1px dotted #bbb}
+.blog-intro p{margin:0 0 3px;font-size:10px}
+.blog-intro .file-tag{color:#777}
+.blog-index-year{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:8px;
+  margin:14px 0 7px;
+  border-bottom:1px dashed #666;
+  padding-bottom:3px;
+}
+.blog-index-year h2{font:700 14px/1.2 Georgia,"Times New Roman",serif}
+.blog-index-year span{font:9px/1.4 "Courier New",monospace;color:#777}
+.blog-month h3{font:italic 12px Georgia,"Times New Roman",serif;margin:5px 0 0;text-align:left}
+.blog-index-list{list-style:none;margin:3px 0 0;padding:0}
+.blog-index-list li{
+  display:grid;
+  grid-template-columns:37px minmax(0,1fr);
+  column-gap:10px;
+  border-bottom:1px dotted #bcbcbc;
+  padding:9px 2px;
+  align-items:start;
+}
+.blog-index-list li:last-child{border-bottom:0}
+.blog-index-list time{font:9px/1.6 "Courier New",monospace;color:#777}
+.blog-index-list a{font:700 11px/1.4 Georgia,"Times New Roman",serif;text-decoration:underline dotted;text-underline-offset:2px}
+.blog-index-list p{font-size:10px;line-height:1.48;margin:3px 0 0;color:#505050}
+.blog-index-foot{display:flex;justify-content:space-between;gap:5px;align-items:center;border-top:1px dotted #777;margin-top:8px;padding-top:8px}
+.blog-index-foot span{font:9px "Courier New",monospace;color:#777}
+.blog-index-foot a{font:9px "Courier New",monospace}
+
+/* Records: image thumbnails are the primary selectors. */
+.record-index-intro{font-size:10px;line-height:1.6;text-align:center;padding:0 0 9px;margin:0}
+.record-index-top{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px;
+  font:9px/1.4 "Courier New",monospace;color:#666;
+  border-top:1px dotted #aaa;border-bottom:1px dotted #aaa;
+  padding:5px 0;margin:3px 0 10px;
+}
+.record-gallery{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:10px;row-gap:14px;list-style:none;margin:0;padding:0;
+}
+.record-grid-item{margin:0;min-width:0;text-align:center}
+.record-thumbnail-link{display:block;text-decoration:none;color:#222;outline-offset:3px}
+.record-thumbnail-link img{
+  display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;
+  border:1px solid #b0b0b0;background:#f3f3f3;
+  filter:grayscale(1);
+}
+.record-grid-id{display:block;margin-top:5px;font:700 10px/1.4 "Courier New",monospace;color:#222}
+.record-grid-caption{display:block;font:9px/1.4 "Courier New",monospace;color:#777}
+.record-thumbnail-link:hover{background:transparent;color:#111}
+.record-thumbnail-link:hover img{outline:1px dashed #333;outline-offset:2px}
+.record-thumbnail-link:hover .record-grid-id{text-decoration:underline dotted}
+.record-thumbnail-link:focus-visible{outline:2px solid #111}
+.record-index-note{
+  font:9px/1.65 "Courier New",monospace;color:#666;text-align:center;
+  border-top:1px dotted #bbb;padding:11px 2px 0;margin:14px 0 7px;
+}
+.record-index-footer{text-align:center;font:9px "Courier New",monospace;margin:0}
+.record-index-footer span{color:#999;margin:0 6px}
+
+/* A selected record opens to a complete template for the real scan/data. */
+.record-detail-page .catalog-back{text-align:left;margin:0 0 8px;font:9px "Courier New",monospace}
+.record-detail-figure{margin:8px 0 12px;text-align:center}
+.record-detail-figure img{
+  display:block;width:min(100%,270px);height:auto;aspect-ratio:1/1;
+  margin:0 auto;object-fit:contain;border:1px dotted #999;
+}
+.record-detail-figure figcaption{font:9px/1.4 "Courier New",monospace;color:#666;margin-top:6px}
+.record-fields{margin:13px 0}
+.record-fields h2{font:700 12px Georgia,"Times New Roman",serif;border-bottom:1px dashed #999;padding-bottom:5px;text-align:center}
+.record-fields dl{margin:2px 0}
+.record-fields dl>div{display:grid;grid-template-columns:41% 59%;border-bottom:1px dotted #bbb;padding:5px 3px;font-size:10px}
+.record-fields dt{color:#666;font:9px/1.5 "Courier New",monospace}
+.record-fields dd{margin:0;overflow-wrap:anywhere}
+.record-detail-page .note{overflow-wrap:anywhere}
+.catalog-neighbors{display:flex;justify-content:space-between;gap:7px;padding-top:8px;margin-top:9px;border-top:1px dotted #999;font:9px "Courier New",monospace}
+@media(max-width:420px){
+  .record-gallery{column-gap:7px;row-gap:11px}
+  .record-grid-caption{font-size:8px}
+}
