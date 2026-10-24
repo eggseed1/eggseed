@@ -266,3 +266,175 @@ body{background-color:#fff;background-image:radial-gradient(#ddd .5px,transparen
 }
 @media(max-width:380px){.site-name.ascii-title pre{font-size:7px}}
 @media(prefers-reduced-motion:reduce){.running-horse{animation:none;transform:translateX(0)}}
+
+
+/* 2026-10-24 / Edge-mounted ASCII lace, unframed masthead, always-visible horses.
+   Lace is actual text, not a background image or a floating decoration. */
+.site-header {
+  height: 91px;
+  padding: 7px 0 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0;
+  background: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  margin-bottom: 11px;
+}
+.site-header .header-flourish {display:none}
+.site-name.ascii-title {
+  display: block;
+  margin: 0;
+  width: max-content;
+  flex: 0 0 auto;
+  border: 0;
+  box-shadow: none;
+  outline-offset: 3px;
+  text-decoration:none;
+}
+.site-name.ascii-title pre {
+  font: 9px/1.04 "Courier New",monospace;
+  font-weight:700;
+  text-align:left;
+  margin:0;
+  color: #080808;
+  white-space:pre;
+  letter-spacing:0;
+}
+.header-horse{
+  display:block;
+  padding:0;
+  margin:0;
+  color:#1b1b1b;
+  font:9px/.98 "Courier New",monospace;
+  white-space:pre;
+  flex:0 0 auto;
+}
+.header-horse-right{transform:scaleX(-1)}
+.header-undertype{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  font:9px/1 "Courier New",monospace;
+  text-align:center;
+  letter-spacing:2px;
+  color:#777;
+}
+.panel,.centerframe,.greeting,.minibox,.blog-box,.maker-entry,.gallery-tile{
+  position:relative;
+  border:1px dashed #656565;
+  padding-top:27px !important;
+  padding-bottom:27px !important;
+  box-shadow:none;
+}
+.panel::before,.panel::after,
+.centerframe::before,.centerframe::after,
+.greeting::before,.greeting::after,
+.minibox::before,.minibox::after,
+.blog-box::before,.blog-box::after,
+.maker-entry::before,.maker-entry::after,
+.gallery-tile::before,.gallery-tile::after{
+  content:".@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@..@#@#@.\A (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) (@@o@@) \A   \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/     \_/   ";
+  position:absolute;
+  display:block;
+  left:4px;
+  right:4px;
+  top:2px;
+  bottom:auto;
+  width:auto;
+  height:20px;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+  font:6px/.95 "Courier New",monospace;
+  font-weight:400;
+  color:#161616;
+  letter-spacing:0;
+  text-align:left;
+  white-space:pre;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+  opacity:.98;
+  transform:none;
+}
+.panel::after,.centerframe::after,
+.greeting::after,.minibox::after,
+.blog-box::after,.maker-entry::after,.gallery-tile::after{
+  top:auto;
+  bottom:2px;
+  transform:scaleY(-1);
+}
+.panel > *,.centerframe > *,.greeting > *,.minibox > *,
+.blog-box > *,.maker-entry > *,.gallery-tile > *{
+  position:relative;
+  z-index:1;
+}
+.panel .inner{border-top:1px dotted #999}
+.panel.rightbox,.panel.navbox{padding-left:8px;padding-right:8px}
+.horse-parade{
+  position:fixed;
+  inset:0;
+  z-index:1;
+  overflow:hidden;
+  pointer-events:none;
+  visibility:visible;
+}
+.running-horse{
+  color:#1c1c1c;
+  position:absolute;
+  top:24%;
+  left:calc(50% - 525px);
+  width:max-content;
+  margin:0;
+  font:10px/1 "Courier New",monospace;
+  white-space:pre;
+  opacity:.50;
+  transform:translate3d(0,0,0);
+  animation:horse-drift 5.5s ease-in-out infinite alternate;
+}
+.runner-two{
+  left:calc(50% + 330px);
+  top:48%;
+  font-size:9px;
+  opacity:.45;
+  animation:horse-drift-right 7s ease-in-out infinite alternate;
+}
+.runner-three{
+  left:calc(50% - 492px);
+  top:78%;
+  font-size:8px;
+  opacity:.36;
+  animation:horse-drift 6.3s ease-in-out infinite alternate-reverse;
+}
+@keyframes horse-drift{
+  0%{transform:translate3d(-8px,0,0)}
+  50%{transform:translate3d(12px,-7px,0)}
+  100%{transform:translate3d(33px,1px,0)}
+}
+@keyframes horse-drift-right{
+  0%{transform:translate3d(20px,0,0)}
+  50%{transform:translate3d(-10px,-6px,0)}
+  100%{transform:translate3d(-28px,2px,0)}
+}
+@media(max-width:680px){
+  .site-header{height:78px;gap:5px}
+  .site-name.ascii-title pre{font-size:7px}
+  .header-horse{font-size:6px}
+  .running-horse{opacity:.22;left:-45px;top:29%;font-size:8px}
+  .runner-two{left:calc(100% - 125px);top:63%;opacity:.23}
+  .runner-three{left:-20px;top:87%;opacity:.18}
+}
+@media(max-width:420px){
+  .header-horse{display:none}
+  .site-name.ascii-title pre{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .running-horse,.runner-two,.runner-three{animation:none!important}
+}
