@@ -18,9 +18,9 @@ Change content in the relevant HTML file. Add records to `45rpm.html`, real scan
 
 ## Last.fm — currently listening (text only)
 
-The homepage's **currently...** box shows:
+The shared **currently...** sidebar box on every page shows:
 - **reading:** *Warlock* — Oakley Hall (static)
-- **listening:** the most recent Last.fm scrobble (updates during deployment)
+- **listening:** the most recent Last.fm scrobble (rendered into every page during deployment)
 
 To connect your public Last.fm profile, edit `lastfm-username.txt` and enter your Last.fm username on its own line. Alternatively set the repository Actions variable `LASTFM_USERNAME`. Then run **Actions → Publish eggseed → Run workflow** or push to `main`. The scheduled workflow also refreshes the last played track at approximately minute 17 of every hour (GitHub schedule times are not guaranteed).
 
