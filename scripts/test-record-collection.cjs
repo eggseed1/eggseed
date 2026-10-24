@@ -17,7 +17,7 @@ for(const r of data.records){
  assert.ok(html.includes('href="'+r.postUrl+'"'),file+": Instagram source link missing");
  assert.ok(html.includes("catalog-neighbors"),file+": browse controls missing");
  assert.ok(html.includes('id="eggseed-mobile-size"'),file+": responsive view control missing");
- assert.ok(html.includes('src="'+r.image.replaceAll("&","&amp;")+'"'),file+": photo URL missing");
+ assert.ok(html.includes('src="'+r.image.replaceAll("&","&amp;")+'"') || html.includes('src="../assets/records/imported/'+r.id+'.jpg"'),file+": photo URL missing");
  if(!r.caption)assert.ok(html.includes("has no caption"),file+": empty caption must be marked");
 }
 console.log("45rpm import OK: 34 image-first items, 34 detail pages, source notes and provenance.");

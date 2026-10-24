@@ -8,7 +8,7 @@ on:
     - cron: '17 * * * *'
 
 permissions:
-  contents: read
+  contents: write
   actions: read
   pages: write
   id-token: write
@@ -35,11 +35,22 @@ jobs:
           node scripts/test-mobile-layout.cjs
           node scripts/test-record-collection.cjs
           node scripts/test-lastfm-publish.cjs
+      - name: Cache Instagram 45rpm photos while URLs are valid
+        run: python3 scripts/cache_record_photos.py
       - name: Update recent Last.fm text
         env:
           LASTFM_USERNAME: ${{ vars.LASTFM_USERNAME }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
         run: python3 scripts/update_lastfm.py
+      - name: Preserve imported record photos in GitHub
+        run: |
+          if [ -n "$(git status --porcelain -- assets/records/imported records/ 45rpm.html)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/records/imported records/ 45rpm.html
+            git commit -m "Store imported Instagram record photos before CDN links expire"
+            git push origin HEAD:main || echo "Images are in this deployment; source sync can retry on next run."
+          fi
       - name: Package static website
         uses: actions/upload-pages-artifact@v4
         with:
