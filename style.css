@@ -374,3 +374,7 @@ body::before {
 @media(prefers-reduced-motion:reduce){
  body::before{animation:none}
 }
+
+/* Small handwritten-web welcome heading. */
+.home-page .greeting h2{font:italic 700 14px/1.35 Georgia,"Times New Roman",serif;text-align:center;margin:0 0 7px}
+.home-page .greeting p{margin:0}
