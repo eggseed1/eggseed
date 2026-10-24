@@ -86,46 +86,99 @@
   }
 
   function convert() {
-    if (!imageSource || !ctx) {
-      say("choose a picture first.");
+    if (!imageSource || !ctx) { say("choose a picture first."); return; }
+    var dims = imageDimensions(imageSource);
+    if (!dims.width || !dims.height) { say("image has no readable pixels."); return; }
+
+    // Character cells are about twice as tall as they are wide.
+    var ratio = (dims.height / dims.width) * 0.5;
+    var requested = clamp(Math.round(Number(widthNumber.value) || 160), 24, MAX_COLUMNS);
+    setColumns(requested);
+    var columns = Math.min(requested, Math.floor(Math.sqrt(MAX_CELLS / ratio)), Math.floor(MAX_ROWS / ratio));
+    if (columns < 1) { say("picture is too tall; crop it before converting."); return; }
+    var rows = Math.max(1, Math.round(columns * ratio));
+    if (columns * rows > MAX_CELLS || rows > MAX_ROWS) {
+      columns -= 1;
+      rows = Math.max(1, Math.round(columns * ratio));
+    }
+    if (columns < 1 || rows > MAX_ROWS || columns * rows > MAX_CELLS) {
+      say("picture dimensions are too extreme; try cropping first.");
       return;
     }
-    var dims = imageDimensions(imageSource);
-    if (!dims.width || !dims.height) { say("this file has no readable pixels."); return; }
-    var columns = Number(widthInput.value);
-    var correction = 0.50; // monospace characters are taller than they are wide
-    var rows = Math.max(1, Math.round(columns * (dims.height / dims.width) * correction));
-    if (rows > 200) {
-      columns = Math.max(1, Math.round(columns * 200 / rows));
-      rows = Math.max(1, Math.round(columns * (dims.height / dims.width) * correction));
-    }
-    canvas.width = columns;
-    canvas.height = rows;
-    ctx.clearRect(0, 0, columns, rows);
-    ctx.drawImage(imageSource, 0, 0, columns, rows);
-    var rgba = ctx.getImageData(0, 0, columns, rows).data;
-    var characters = charsetInput.value;
+    var count = columns * rows;
+    var characters = palettes[charsetInput.value] || palettes.ultra;
+    var steps = characters.length - 1;
     var contrast = Number(contrastInput.value) / 100;
     var brightness = Number(brightnessInput.value) / 100;
     var invert = invertInput.checked;
-    var lines = [];
-    for (var y = 0; y < rows; y++) {
-      var line = "";
-      for (var x = 0; x < columns; x++) {
-        var i = (y * columns + x) * 4;
-        var opacity = rgba[i + 3] / 255;
-        var red = rgba[i] * opacity + 255 * (1 - opacity);
-        var green = rgba[i + 1] * opacity + 255 * (1 - opacity);
-        var blue = rgba[i + 2] * opacity + 255 * (1 - opacity);
-        var gray = (0.2126 * red + 0.7152 * green + 0.0722 * blue) / 255;
-        var tone = Math.max(0, Math.min(1, (gray - 0.5) * contrast + 0.5 + brightness));
-        if (invert) tone = 1 - tone;
-        line += characters.charAt(Math.round(tone * (characters.length - 1)));
+    var dither = ditherInput.checked;
+    var enhanceEdges = edgeInput.checked;
+    var pixels;
+    try {
+      canvas.width = columns;
+      canvas.height = rows;
+      ctx.imageSmoothingEnabled = true;
+      if ("imageSmoothingQuality" in ctx) ctx.imageSmoothingQuality = "high";
+      ctx.clearRect(0, 0, columns, rows);
+      ctx.drawImage(imageSource, 0, 0, columns, rows);
+      pixels = ctx.getImageData(0, 0, columns, rows).data;
+    } catch (error) {
+      say("could not read the image: " + (error.message || "pixel error"));
+      return;
+    }
+    var tones = new Float32Array(count);
+    for (var p = 0, i = 0; p < count; p++, i += 4) {
+      var alpha = pixels[i + 3] / 255;
+      var luminosity = (0.2126 * pixels[i] + 0.7152 * pixels[i + 1]
+        + 0.0722 * pixels[i + 2]) * alpha + 255 * (1 - alpha);
+      var tone = clamp((luminosity / 255 - 0.5) * contrast + 0.5 + brightness, 0, 1);
+      tones[p] = invert ? 1 - tone : tone;
+    }
+    if (enhanceEdges) {
+      var sharp = new Float32Array(count);
+      for (var y = 0; y < rows; y++) {
+        for (var x = 0; x < columns; x++) {
+          var at = y * columns + x, sum = 0, neighbors = 0;
+          if (x > 0) { sum += tones[at - 1]; neighbors++; }
+          if (x + 1 < columns) { sum += tones[at + 1]; neighbors++; }
+          if (y > 0) { sum += tones[at - columns]; neighbors++; }
+          if (y + 1 < rows) { sum += tones[at + columns]; neighbors++; }
+          var average = neighbors ? sum / neighbors : tones[at];
+          sharp[at] = clamp(tones[at] + 0.65 * (tones[at] - average), 0, 1);
+        }
       }
-      lines.push(line);
+      tones = sharp;
+    }
+    var error = dither ? new Float32Array(count) : null;
+    var lines = new Array(rows);
+    for (var row = 0; row < rows; row++) {
+      var line = new Array(columns);
+      for (var col = 0; col < columns; col++) {
+        var index = row * columns + col;
+        var adjusted = clamp(tones[index] + (dither ? error[index] : 0), 0, 1);
+        var shade = Math.round(adjusted * steps);
+        line[col] = characters.charAt(shade);
+        if (dither) {
+          var quantError = adjusted - shade / steps;
+          if (col + 1 < columns) error[index + 1] += quantError * 7 / 16;
+          if (row + 1 < rows) {
+            if (col > 0) error[index + columns - 1] += quantError * 3 / 16;
+            error[index + columns] += quantError * 5 / 16;
+            if (col + 1 < columns) error[index + columns + 1] += quantError / 16;
+          }
+        }
+      }
+      lines[row] = line.join("");
     }
     output.value = lines.join("\n");
-    say("done! " + columns + " columns / " + rows + " rows. you can edit the result below.");
+    output.scrollLeft = 0;
+    output.scrollTop = 0;
+    var message = "done! " + columns + " columns x " + rows + " rows ("
+      + count.toLocaleString() + " characters). scroll sideways or save .txt for the full detail.";
+    if (columns < requested) {
+      message += " reduced from " + requested + " columns to stay within the browser safety limit.";
+    }
+    say(message);
   }
 
   function safeBase(name) {
