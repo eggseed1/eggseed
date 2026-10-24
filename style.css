@@ -699,3 +699,95 @@ body::before,body::after {
 @media(max-width:360px){
   .maker-page .maker-settings-grid{grid-template-columns:1fr}
 }
+
+
+/* Mobile desktop-layout preservation, 2026-10.
+   Default: fit the original three columns into a phone.
+   Checkbox: keep the same three columns at normal text size and pan horizontally.
+   Pure HTML/CSS; no extra JavaScript or layout jumping between columns. */
+.mobile-view-toggle,.mobile-view-label{display:none}
+@media(max-width:680px){
+  html{overflow-x:auto}
+  body{min-width:0;overflow-x:auto}
+  .mobile-view-toggle{
+    display:block;position:absolute;left:-9999px;top:auto;
+    width:1px;height:1px;opacity:0;
+  }
+  .mobile-view-label{
+    display:block;position:relative;z-index:8;
+    width:max-content;max-width:calc(100vw - 12px);
+    margin:6px auto 4px;padding:2px 5px;
+    background:rgba(255,255,255,.97);
+    border:1px dotted #888;
+    font:10px/1.4 "Courier New",monospace;
+    text-decoration:underline dotted;cursor:pointer;
+    color:#111;text-align:center;
+  }
+  .mobile-view-label .mobile-return-text{display:none}
+  .mobile-view-toggle:checked + .mobile-view-label .mobile-full-text{display:none}
+  .mobile-view-toggle:checked + .mobile-view-label .mobile-return-text{display:inline}
+  .mobile-view-toggle:focus-visible + .mobile-view-label{
+    outline:2px solid #111;outline-offset:2px
+  }
+  .site,.maker-page .site,.maker-page.maker-wide .site{
+    box-sizing:border-box;
+    width:632px!important;max-width:none!important;
+    margin:9px auto 24px!important;
+    zoom:.95;
+  }
+  .site .columns,.maker-page .columns,.maker-page.maker-wide .columns{
+    display:grid!important;
+    grid-template-columns:145px minmax(0,1fr) 145px!important;
+    gap:11px!important;
+    align-items:stretch!important;
+  }
+  .site .left-col,.site .center-col,.site .right-col{
+    display:flex!important;flex-direction:column!important;
+    min-width:0;min-height:0;align-self:stretch;
+  }
+  .site .left-col>.panel:last-child,
+  .site .right-col>.panel:last-child{
+    flex-grow:1;margin-bottom:0;
+  }
+  .site .centerframe{min-width:0;min-height:0;flex:1}
+  .site .navbox .inner{display:block!important}
+  .site .navbox .panel-label{display:block}
+  .site .site-header{height:86px;gap:15px;margin-bottom:12px}
+  .site .site-name.ascii-title pre{font-size:9px!important}
+  .site .header-horse{display:block!important;font-size:9px!important}
+  .site .home-page .double-mini,.home-page .double-mini{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .home-page .home-fish{font-size:7px!important}
+  .maker-page .maker-settings-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .maker-page .maker-output{
+    min-width:0;max-width:100%;
+    overflow-x:auto!important;white-space:pre!important
+  }
+  /* The checkbox follows the top of body, so the original fixed size can
+     safely overflow the phone horizontally and be inspected by swiping. */
+  .mobile-view-toggle:checked ~ .site{
+    zoom:1!important;
+    width:632px!important;max-width:none!important;
+    margin:9px 8px 24px!important;
+  }
+  .maker-page.maker-wide .site{width:632px!important}
+}
+@media(max-width:609px){
+  .site,.maker-page .site,.maker-page.maker-wide .site{zoom:.84}
+}
+@media(max-width:539px){
+  .site,.maker-page .site,.maker-page.maker-wide .site{zoom:.75}
+}
+@media(max-width:479px){
+  .site,.maker-page .site,.maker-page.maker-wide .site{zoom:.66}
+}
+@media(max-width:419px){
+  .site,.maker-page .site,.maker-page.maker-wide .site{zoom:.58}
+}
+@media(max-width:369px){
+  .site,.maker-page .site,.maker-page.maker-wide .site{zoom:.51}
+}
+@media(max-width:324px){
+  .site,.maker-page .site,.maker-page.maker-wide .site{zoom:.46}
+}
