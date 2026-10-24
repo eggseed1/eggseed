@@ -14,6 +14,6 @@ GitHub Pages: Settings > Pages > Deploy from branch > main > /(root). Address: h
 
 ## Edit
 
-Change content in the relevant HTML file. Add records to `45rpm.html`, real scans to `media.html`, and new posts to `blog/`, then update the home/blog indexes. Every page uses `style.css`. No JavaScript, SVG, images, remote assets, cookies, trackers or dependencies.
+Change content in the relevant HTML file. Add records to `45rpm.html`, real scans to `media.html`, and new posts to `blog/`, then update the home/blog indexes. Every page uses `style.css`. The core site is pure HTML/CSS. Only `ascii.html` loads a small self-hosted vanilla JavaScript file for local image conversion. No libraries, external assets, image uploads, remote requests, cookies, or trackers.
 
-The in-browser ASCII page is a text editor; HTML/CSS cannot convert uploaded images, so an optional offline Python converter can be used outside the website.
+The in-browser ASCII maker converts local raster pictures to editable text, with width, contrast, brightness, character-palette and invert controls. Save the result as .txt or copy it. It needs JavaScript because plain HTML/CSS cannot read pixels; all computation stays in your browser. The optional Python converter still works offline.
