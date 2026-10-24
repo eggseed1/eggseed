@@ -869,3 +869,39 @@ body::before,body::after {
   margin:0;font:italic 11px/1.65 Georgia,"Times New Roman",serif;
 }
 .review-body section:last-child{margin-bottom:0}
+
+
+/* Review artwork from the record label: naturally scaled to eggseed's center column. */
+.review-cover{
+  width:min(100%,228px);
+  margin:2px auto 17px;
+  text-align:center;
+}
+.review-cover a{display:block;background:transparent}
+.review-cover img{
+  display:block;width:100%;height:auto;aspect-ratio:1;
+  object-fit:cover;
+  border:1px solid #a9a9a9;
+  box-shadow:none;
+  background:#eee;
+}
+.review-cover figcaption{
+  font:9px/1.5 "Courier New",monospace;
+  color:#666;padding-top:5px;
+}
+.review-cover figcaption a{display:inline}
+.review-entry-with-art{
+  display:grid;
+  grid-template-columns:70px minmax(0,1fr);
+  gap:10px;
+  align-items:start;
+}
+.review-entry-cover{display:block;line-height:0;background:transparent}
+.review-entry-cover img{
+  display:block;width:100%;height:auto;aspect-ratio:1;
+  border:1px solid #aaa;object-fit:cover;background:#eee;
+}
+.review-entry-copy{min-width:0}
+.review-entry-with-art h2{font-size:13px}
+.review-entry-with-art .review-entry-credit{margin-bottom:5px}
+.review-entry-with-art .review-entry-excerpt{font-size:10px;line-height:1.5}
