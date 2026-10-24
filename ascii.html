@@ -73,16 +73,16 @@
 </div>
 <fieldset class="maker-settings"><legend>[ fiddle with the dials ]</legend>
   <div class="maker-settings-grid">
-    <label>columns <output id="ascii-width-value" for="ascii-width">72</output><input type="range" id="ascii-width" min="24" max="120" step="2" value="72"></label>
+    <div class="maker-width-control"><label for="ascii-width">columns <output id="ascii-width-value" for="ascii-width">160</output></label><input type="range" id="ascii-width" min="40" max="1200" step="10" value="160" aria-label="ASCII art resolution, number of columns"><label for="ascii-width-number" class="maker-number-label">exact:</label><input id="ascii-width-number" type="number" inputmode="numeric" min="24" max="1200" step="1" value="160" aria-label="Exact output columns"></div>
     <label>contrast <output id="ascii-contrast-value" for="ascii-contrast">1.20</output><input type="range" id="ascii-contrast" min="50" max="210" step="10" value="120"></label>
     <label>brightness <output id="ascii-brightness-value" for="ascii-brightness">0</output><input type="range" id="ascii-brightness" min="-40" max="40" step="5" value="0"></label>
-    <label>alphabet <select id="ascii-charset"><option value="@%#*+=-:. ">classic @%#</option><option value="@#8&amp;o:*. ">darkroom</option><option value="#+-. ">simple ink</option><option value="10 ">binary / 10</option></select></label>
+    <label>alphabet <select id="ascii-charset"><option value="ultra" selected>extra detailed / 70 shades</option><option value="classic">classic @%#</option><option value="darkroom">darkroom</option><option value="simple">simple ink</option><option value="binary">binary / 10</option></select></label>
   </div>
-  <label class="maker-invert"><input type="checkbox" id="ascii-invert"> invert black &amp; white</label>
+  <div class="maker-presets" aria-label="Quick column presets"><span>size:</span><button type="button" data-ascii-width="80">[ 80 ]</button><button type="button" data-ascii-width="160">[ 160 ]</button><button type="button" data-ascii-width="320">[ 320 ]</button><button type="button" data-ascii-width="640">[ 640 ]</button><button type="button" data-ascii-width="1200">[ 1200 ]</button></div><div class="maker-enhancements"><label class="maker-invert"><input type="checkbox" id="ascii-invert"> invert black &amp; white</label><label><input type="checkbox" id="ascii-edge"> sharpen edges</label><label><input type="checkbox" id="ascii-dither"> smooth tonal detail (dither)</label></div><p class="note">320–640 columns for detailed prints; 1200 for huge text files. Large art scrolls horizontally rather than wrapping.</p>
 </fieldset>
 <div class="maker-actions"><button type="button" id="ascii-convert" disabled>[ convert ]</button></div>
 <fieldset class="maker-settings maker-text" id="ascii-letter-station"><legend>[ words into ASCII ]</legend><label class="maker-text-label" for="ascii-letter-input">type a phrase:</label><input type="text" id="ascii-letter-input" class="maker-letter-input" maxlength="80" value="" placeholder="HONKY TONK / EGGSEED" autocomplete="off"><div class="maker-actions"><button type="button" id="ascii-letter-convert">[ make letters ]</button></div><p class="note">big ASCII lettering appears in the same editable output below. try your favorite country singer or record label.</p></fieldset>
-<div class="maker-result-header"><h2 class="subhead">your ascii / typewriter desk</h2><span class="note">[ you can edit this text ]</span></div>
+<div class="maker-result-header"><h2 class="subhead">your ascii / typewriter desk</h2><span class="note">[ you can edit this text ]</span></div><div class="maker-view-controls"><label for="ascii-zoom">text size <output id="ascii-zoom-value" for="ascii-zoom">7px</output></label><input id="ascii-zoom" type="range" min="4" max="13" value="7" step="1"><button type="button" id="ascii-wide">[ wide view ]</button></div>
 <textarea class="maker-output" id="ascii-output" aria-label="Editable ASCII artwork" spellcheck="false" wrap="off" autocapitalize="off" autocomplete="off" autocorrect="off">       .---.
     __/_____\\__
    /___________\\
