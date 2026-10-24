@@ -18,7 +18,7 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = sorted(ROOT.glob("*.html")) + sorted((ROOT / "blog").glob("*.html"))
+PAGES = sorted(ROOT.glob("*.html")) + sorted((ROOT / "blog").glob("*.html")) + sorted((ROOT / "records").glob("*.html"))
 CONFIG = ROOT / "lastfm-username.txt"
 START = "<!-- LASTFM_START -->"
 END = "<!-- LASTFM_END -->"
