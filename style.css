@@ -490,3 +490,36 @@ body::after,
 @media(prefers-reduced-motion:reduce){
   body::before,.horse-parade::before{animation:none!important;transform:translate3d(0,0,0)!important}
 }
+
+
+/* Two independent motion tracks: long cross-screen travel and a fast
+   0.55s gallop cadence. Both operate entirely in CSS. */
+body::before{
+  translate:0 0;
+  transform:none;
+  animation:
+    eggseed-crossing 32s linear infinite -11s,
+    eggseed-hooves .55s ease-in-out infinite;
+}
+.horse-parade::before{
+  translate:0 0;
+  transform:none;
+  animation:
+    eggseed-crossing 41s linear infinite -29s,
+    eggseed-hooves .58s ease-in-out infinite reverse;
+}
+@keyframes eggseed-crossing{
+  0%{translate:calc(-100% - 5vw) 0}
+  100%{translate:110vw 0}
+}
+@keyframes eggseed-hooves{
+  0%,100%{transform:translateY(3px)}
+  50%{transform:translateY(-4px)}
+}
+@media(prefers-reduced-motion:reduce){
+  body::before,.horse-parade::before{
+    animation:none!important;
+    translate:0 0;
+    transform:none;
+  }
+}
