@@ -791,3 +791,81 @@ body::before,body::after {
 @media(max-width:324px){
   .site,.maker-page .site,.maker-page.maker-wide .site{zoom:.46}
 }
+
+
+/* One-column review listing and long-form liner-note style.
+   Keeps eggseed's original three-column site and mobile pan layout. */
+.reviews-index .review-entry{
+  padding:7px 2px 12px;
+  border-bottom:1px dotted #999;
+}
+.review-entry-type,.review-category{
+  font:9px/1.5 "Courier New",monospace;
+  color:#777;
+  margin:0 0 5px;
+  letter-spacing:.02em;
+}
+.review-entry h2{
+  font:700 15px/1.25 Georgia,"Times New Roman",serif;
+  margin:0 0 4px;
+}
+.review-entry h2 a{text-decoration:underline dotted;text-underline-offset:3px}
+.review-entry-credit{font-size:10px;color:#555;margin:0 0 10px}
+.review-entry-excerpt{font:10px/1.6 "Trebuchet MS",Tahoma,sans-serif;margin:0 0 8px}
+.review-entry-read{text-align:right;margin:0;font:10px "Courier New",monospace}
+.review-article{padding:10px 10px 13px}
+.review-back{font:9px/1.4 "Courier New",monospace;margin:0 0 11px}
+.review-back-bottom{margin:12px 0 0;border-top:1px dotted #999;padding-top:10px;text-align:center}
+.review-heading h1{
+  font:700 20px/1.18 Georgia,"Times New Roman",serif;
+  text-align:center;letter-spacing:-.02em;
+  overflow-wrap:break-word;
+  margin:4px 0 13px;
+}
+.review-heading .review-category{text-align:center}
+.review-metadata{
+  width:100%;border-collapse:collapse;
+  font:10px/1.5 "Courier New",monospace;
+  margin:0 0 18px;
+  border-top:1px dotted #888;
+  border-bottom:1px dotted #888;
+  table-layout:fixed;
+}
+.review-metadata tr+tr{border-top:1px dotted #ccc}
+.review-metadata th{
+  color:#666;font-weight:normal;text-align:left;
+  vertical-align:top;width:31%;
+  padding:6px 4px 6px 0;
+}
+.review-metadata td{
+  padding:6px 0 6px 4px;
+  overflow-wrap:break-word;
+  vertical-align:top;
+}
+.review-body p{
+  font:11px/1.77 "Trebuchet MS",Tahoma,Verdana,sans-serif;
+  margin:0 0 12px;
+  overflow-wrap:break-word;
+}
+.review-body .review-opening{
+  font-style:italic;
+  border-bottom:1px dotted #bbb;
+  padding-bottom:14px;
+  margin-bottom:17px;
+}
+.review-body section{margin:15px 0 20px}
+.review-body h2{
+  font:700 14px/1.3 Georgia,"Times New Roman",serif;
+  margin:0 0 10px;padding:0 0 7px;
+  border-bottom:1px dotted #999;
+}
+.review-body .review-lyrics{
+  margin:12px 0 14px;
+  padding:5px 0 5px 13px;
+  border-left:2px solid #777;
+  background:transparent;
+}
+.review-body .review-lyrics p{
+  margin:0;font:italic 11px/1.65 Georgia,"Times New Roman",serif;
+}
+.review-body section:last-child{margin-bottom:0}
