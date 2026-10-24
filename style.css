@@ -523,3 +523,73 @@ body::before{
     transform:none;
   }
 }
+
+
+/* Compact ASCII fish from the supplied art, replacing the welcome horse. */
+.home-page .home-fish{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  margin:0 auto 11px;
+  padding:0;
+  font:clamp(5.3px,.65vw,7px)/1.04 "Courier New",monospace;
+  letter-spacing:0;
+  white-space:pre;
+  text-align:left;
+  overflow:hidden;
+  color:#141414;
+}
+.home-page .homestead-intro{display:flex;flex-direction:column;align-items:stretch;gap:3px}
+
+/* Every action link has the understated [ read ] treatment:
+   a literal bracket label, monochrome link, no button outline or fill. */
+.button-small,
+.record-link,
+.post .more,
+.maker-actions button,
+.maker-drop label{
+  display:inline-block;
+  box-sizing:border-box;
+  max-width:100%;
+  margin:0;
+  padding:0!important;
+  border:0!important;
+  outline:0;
+  box-shadow:none!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#222!important;
+  font:10px/1.5 "Courier New",monospace!important;
+  text-align:center;
+  text-decoration:underline dotted;
+  text-underline-offset:3px;
+  cursor:pointer;
+}
+.button-small:hover,
+.record-link:hover,
+.post .more:hover,
+.maker-actions button:hover:not(:disabled),
+.maker-drop label:hover{
+  background:#111!important;
+  color:#fff!important;
+  text-decoration:none;
+}
+.button-small:focus-visible,
+.record-link:focus-visible,
+.post .more:focus-visible,
+.maker-actions button:focus-visible,
+.maker-drop input:focus-visible{
+  outline:2px solid #111!important;
+  outline-offset:3px;
+}
+.maker-actions button:disabled{
+  color:#999!important;
+  cursor:not-allowed;
+  opacity:.55;
+}
+.maker-actions{column-gap:13px;row-gap:8px}
+.home-page .ascii-side-panel .button-small{font-size:10px!important;line-height:1.5!important;padding:0!important}
+.home-page .minibox a[href="archive.html"]{font:10px/1.5 "Courier New",monospace}
+@media(max-width:420px){
+  .home-page .home-fish{font-size:5.3px}
+}
