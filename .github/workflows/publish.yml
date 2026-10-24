@@ -27,6 +27,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Prepare GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Verify high-resolution ASCII maker
+        run: |
+          node --check ascii-maker.js
+          node scripts/test-ascii-maker.cjs
       - name: Update recent Last.fm text
         env:
           LASTFM_USERNAME: ${{ vars.LASTFM_USERNAME }}
