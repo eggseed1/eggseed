@@ -31,6 +31,7 @@ jobs:
         run: |
           node --check ascii-maker.js
           node scripts/test-ascii-maker.cjs
+          node scripts/test-mobile-layout.cjs
       - name: Update recent Last.fm text
         env:
           LASTFM_USERNAME: ${{ vars.LASTFM_USERNAME }}
