@@ -18,7 +18,7 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-INDEX = ROOT / "index.html"
+PAGES = sorted(ROOT.glob("*.html")) + sorted((ROOT / "blog").glob("*.html"))
 CONFIG = ROOT / "lastfm-username.txt"
 START = "<!-- LASTFM_START -->"
 END = "<!-- LASTFM_END -->"
@@ -96,12 +96,6 @@ def rss_recent(user: str) -> tuple[str, str, bool]:
 
 def main() -> None:
     user = username()
-    document = INDEX.read_text(encoding="utf-8")
-    start = document.find(START)
-    end = document.find(END, start + len(START))
-    if start < 0 or end < 0:
-        raise SystemExit("Last.fm markers missing from index.html")
-
     if not user:
         fragment = '<span class="currently-muted">Last.fm not connected yet</span>'
         print("Last.fm username not configured; keeping placeholder.")
@@ -126,10 +120,23 @@ def main() -> None:
             )
             print(f"Could not fetch Last.fm activity: {type(error).__name__}: {error}")
 
-    INDEX.write_text(
-        document[: start + len(START)] + fragment + document[end:],
-        encoding="utf-8",
-    )
+    refreshed = 0
+    for page in PAGES:
+        document = page.read_text(encoding="utf-8")
+        start = document.find(START)
+        if start < 0:
+            continue
+        end = document.find(END, start + len(START))
+        if end < 0:
+            raise SystemExit(f"Last.fm ending marker missing from {page.name}")
+        page.write_text(
+            document[:start + len(START)] + fragment + document[end:],
+            encoding="utf-8",
+        )
+        refreshed += 1
+    if refreshed == 0:
+        raise SystemExit("No Last.fm markers in HTML")
+    print(f"Refreshed listening text on {refreshed} pages.")
 
 
 if __name__ == "__main__":
