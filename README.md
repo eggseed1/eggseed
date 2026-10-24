@@ -14,7 +14,7 @@ GitHub Pages: Settings > Pages > Deploy from branch > main > /(root). Address: h
 
 ## Edit
 
-Change content in the relevant HTML file. Add records to `45rpm.html`, real scans to `media.html`, and new posts to `blog/`, then update the home/blog indexes. Every page uses `style.css`. The core site is pure HTML/CSS. Only `ascii.html` loads a self-hosted vanilla JavaScript file for locally converting images and typed words to ASCII. No libraries, external assets, image uploads, remote requests, cookies, or trackers.
+Change content in the relevant HTML file. Add record photos in `assets/records/`, real magazine scans on `media.html`, and new posts in `blog/`. Update each index when adding a new item. Every page uses `style.css`. The core site is pure HTML/CSS. Only `ascii.html` loads a self-hosted vanilla JavaScript file for locally converting images and typed words to ASCII. No libraries, external assets, image uploads, remote requests, cookies, or trackers.
 
 ## Last.fm — currently listening (text only)
 
@@ -29,3 +29,17 @@ With only a username, the build fetches a public RSS feed from the unofficial `l
 If the feed is temporarily down, the website displays a profile link instead of claiming a track is playing. The listening line remains a placeholder until a username is configured.
 
 The in-browser ASCII maker converts local raster pictures to editable text, with width, contrast, brightness, character-palette and invert controls. Save the result as .txt or copy it. It needs JavaScript because plain HTML/CSS cannot read pixels; all computation stays in your browser. The optional Python converter still works offline.
+
+## Blog layout & the record cabinet
+
+The **blog** is an old-web dated index in `blog.html`. Each entry points to its own HTML page in `blog/`. To add a real post, create the post page, then add its date/title/excerpt to the list in `blog.html`.
+
+The **45rpm records** shelf in `45rpm.html` is an image-first **2-column grid**; there is no text table. Each thumbnail opens an individual detail page, `records/001.html` through `records/006.html`. The first six images (`assets/records/001.svg` … `006.svg`) are clearly labeled illustrations, **not photographs of owned records or real catalog entries**.
+
+To add your real record scans:
+1. Place your scan in `assets/records/` (for example, `001.jpg`).
+2. Update the image `src` in both `45rpm.html` (`assets/records/001.jpg`) and `records/001.html` (`../assets/records/001.jpg`).
+3. Fill out the artist, a-side, b-side, label/cat. no., year, condition, and notes on the detail page.
+4. Replace the placeholder image description with a useful description of your actual record.
+
+The catalog intentionally does not claim to contain any specific records until real item information is added. Everything is static HTML/CSS; no external image hosting or JavaScript is required for the gallery.
