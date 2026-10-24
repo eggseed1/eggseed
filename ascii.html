@@ -61,8 +61,8 @@
    /  |     |  |</pre><p class="side-caption">west of the dial.</p></section>
 </aside>
 <main class="center-col" id="content"><div class="centerframe">
-<h1 class="section-head">ascii machine</h1>
-<p>feed this little machine a record sleeve, magazine scan, photograph, or cowboy picture. it will turn the picture into <b>real, editable ASCII text</b> right here on the site.</p>
+<h1 class="section-head">ascii maker / workbench</h1>
+<p>make real, editable ASCII art from photographs, screenshots, record scans, or your own words.</p>
 <pre class="maker-banner" aria-hidden="true">  .----------------------.
   |  *  ASCII  MAKER  *  |
   |    [@%#*+=-:. ]      |
@@ -70,7 +70,7 @@
 <div class="maker-drop" id="ascii-drop">
   <label for="ascii-file">[ choose a picture + ]</label>
   <input type="file" id="ascii-file" accept="image/png,image/jpeg,image/webp,image/gif,image/bmp,image/avif">
-  <p class="note">or drag &amp; drop one here. 15 MB max. never uploaded.</p>
+  <p class="note">drag a picture here, or paste a screenshot. files stay on your device.</p>
 </div>
 <fieldset class="maker-settings"><legend>[ fiddle with the dials ]</legend>
   <div class="maker-settings-grid">
@@ -82,6 +82,7 @@
   <label class="maker-invert"><input type="checkbox" id="ascii-invert"> invert black &amp; white</label>
 </fieldset>
 <div class="maker-actions"><button type="button" id="ascii-convert" disabled>[ convert ]</button><button type="button" id="ascii-demo">[ cowboy demo ]</button></div>
+<fieldset class="maker-settings maker-text" id="ascii-letter-station"><legend>[ words into ASCII ]</legend><label class="maker-text-label" for="ascii-letter-input">type a phrase:</label><input type="text" id="ascii-letter-input" class="maker-letter-input" maxlength="80" value="" placeholder="HONKY TONK / EGGSEED" autocomplete="off"><div class="maker-actions"><button type="button" id="ascii-letter-convert">[ make big letters + ]</button></div><p class="note">big ASCII lettering appears in the same editable output below. try your favorite country singer or record label.</p></fieldset>
 <div class="maker-result-header"><h2 class="subhead">your ascii / typewriter desk</h2><span class="note">[ you can edit this text ]</span></div>
 <textarea class="maker-output" id="ascii-output" aria-label="Editable ASCII artwork" spellcheck="false" wrap="off" autocapitalize="off" autocomplete="off" autocorrect="off">       .---.
     __/_____\\__
@@ -95,7 +96,7 @@
 <div class="maker-actions"><button type="button" id="ascii-copy">[ copy text ]</button><button type="button" id="ascii-download">[ save .txt ]</button><button type="button" id="ascii-clear">[ clear ]</button></div>
 <p class="note" role="status" aria-live="polite" id="ascii-status">ready.</p>
 <div class="stamp-strip">* * *  country 45s / little pictures / text magic  * * *</div>
-<p class="note">this tool uses a tiny vanilla javascript file only for the image conversion; everything else on eggseed stays plain HTML and CSS. no accounts, no servers, no uploads.</p>
+<p class="note">images are processed here on your device. copy or save the resulting plain text.</p>
 <noscript><p><b>javascript is off:</b> you can still edit the ASCII box by hand, but automatic picture conversion needs javascript enabled.</p></noscript>
 </div></main>
 <aside class="right-col" aria-label="updates and archives">
