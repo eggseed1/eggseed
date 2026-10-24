@@ -35,7 +35,7 @@
   var MAX_CELLS = 1200000;
   var MAX_ROWS = 2200;
   var palettes = {
-    ultra: "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\\"^\u0060'. ",
+    ultra: "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,. ",
     classic: "@%#*+=-:. ",
     darkroom: "@#8&o:*. ",
     simple: "#+-. ",
