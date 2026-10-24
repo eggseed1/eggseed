@@ -270,14 +270,44 @@
   dropZone.addEventListener("drop", function (event) {
     if (event.dataTransfer && event.dataTransfer.files.length) loadFile(event.dataTransfer.files[0]);
   });
-  [widthInput, contrastInput, brightnessInput].forEach(function (input) {
-    input.addEventListener("input", function () {
+  widthInput.addEventListener("input", function () {
+    setColumns(widthInput.value);
+  });
+  widthInput.addEventListener("change", function () {
+    setColumns(widthInput.value);
+    if (imageSource && !processing) convert();
+  });
+  widthNumber.addEventListener("input", function () { widthValue.textContent = widthNumber.value; });
+  widthNumber.addEventListener("change", function () {
+    setColumns(widthNumber.value);
+    if (imageSource && !processing) convert();
+  });
+  Array.prototype.forEach.call(presetButtons, function (button) {
+    button.addEventListener("click", function () {
+      setColumns(button.getAttribute("data-ascii-width"));
+      if (imageSource && !processing) convert();
+    });
+  });
+  [contrastInput, brightnessInput].forEach(function (input) {
+    input.addEventListener("input", updateIndicators);
+    input.addEventListener("change", function () {
       updateIndicators();
       if (imageSource && !processing) convert();
     });
   });
-  [charsetInput, invertInput].forEach(function (input) {
-    input.addEventListener("change", function () { if (imageSource && !processing) convert(); });
+  [charsetInput, invertInput, edgeInput, ditherInput].forEach(function (input) {
+    input.addEventListener("change", function () {
+      if (imageSource && !processing) convert();
+    });
+  });
+  zoomInput.addEventListener("input", function () {
+    var px = clamp(Number(zoomInput.value) || 7, 4, 13);
+    output.style.fontSize = px + "px";
+    zoomValue.textContent = px + "px";
+  });
+  wideButton.addEventListener("click", function () {
+    var wide = document.body.classList.toggle("maker-wide");
+    wideButton.textContent = wide ? "[ normal view ]" : "[ wide view ]";
   });
   convertButton.addEventListener("click", convert);
   copyButton.addEventListener("click", copyResult);
@@ -296,7 +326,9 @@
   } else {
     say("ready. images never leave your device.");
   }
+  setColumns(160);
   updateIndicators();
+  updateZoom();
 }());
 
 /* Word lettering and screenshot-paste extension. No network requests. */
