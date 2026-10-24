@@ -10,6 +10,12 @@ assert.match(index,/click a record to see its a-side, b-side, label, pressing no
 for(const r of data.records){
  const file="records/"+r.id+".html";
  const html=fs.readFileSync(file,"utf8");
+ const photo="assets/records/imported/"+r.id+".jpg";
+ if(fs.existsSync(photo)){
+   assert.ok(fs.statSync(photo).size>2000,file+": cached photo file empty");
+   assert.ok(index.includes('src="'+photo+'"'),file+": gallery not using permanent photo");
+   assert.ok(html.includes('src="../'+photo+'"'),file+": detail not using permanent photo");
+ }
  assert.ok(index.includes('href="'+file+'"'),file+": missing gallery link");
  assert.ok(html.includes('<!-- LASTFM_START -->'),file+": Last.fm sidebar absent");
  assert.ok(html.includes("record-collection-notes"),file+": original notes not preserved");
