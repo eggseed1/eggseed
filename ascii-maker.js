@@ -8,6 +8,7 @@
   var output = document.getElementById("ascii-output");
   var statusBox = document.getElementById("ascii-status");
   var widthInput = document.getElementById("ascii-width");
+  var widthNumber = document.getElementById("ascii-width-number");
   var widthValue = document.getElementById("ascii-width-value");
   var contrastInput = document.getElementById("ascii-contrast");
   var contrastValue = document.getElementById("ascii-contrast-value");
@@ -15,6 +16,12 @@
   var brightnessValue = document.getElementById("ascii-brightness-value");
   var charsetInput = document.getElementById("ascii-charset");
   var invertInput = document.getElementById("ascii-invert");
+  var edgeInput = document.getElementById("ascii-edge");
+  var ditherInput = document.getElementById("ascii-dither");
+  var zoomInput = document.getElementById("ascii-zoom");
+  var zoomValue = document.getElementById("ascii-zoom-value");
+  var wideButton = document.getElementById("ascii-wide");
+  var presetButtons = document.querySelectorAll("[data-ascii-width]");
   var convertButton = document.getElementById("ascii-convert");
   var copyButton = document.getElementById("ascii-copy");
   var downloadButton = document.getElementById("ascii-download");
@@ -24,12 +31,36 @@
   var processing = false;
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d", { willReadFrequently: true });
+  var MAX_COLUMNS = 1200;
+  var MAX_CELLS = 1200000;
+  var MAX_ROWS = 2200;
+  var palettes = {
+    ultra: "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\\"^\u0060'. ",
+    classic: "@%#*+=-:. ",
+    darkroom: "@#8&o:*. ",
+    simple: "#+-. ",
+    binary: "10 "
+  };
   function say(message) {
     statusBox.textContent = message;
   }
 
+  function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
+  function setColumns(raw) {
+    var value = Number(raw);
+    if (!Number.isFinite(value)) value = 160;
+    value = clamp(Math.round(value), 24, MAX_COLUMNS);
+    widthNumber.value = String(value);
+    widthInput.value = String(value);
+    widthValue.textContent = String(value);
+  }
+  function updateZoom() {
+    var px = clamp(Number(zoomInput.value) || 7, 4, 13);
+    output.style.fontSize = px + "px";
+    zoomValue.textContent = px + "px";
+  }
   function updateIndicators() {
-    widthValue.textContent = widthInput.value;
+    widthValue.textContent = widthNumber.value;
     contrastValue.textContent = (Number(contrastInput.value) / 100).toFixed(2);
     brightnessValue.textContent = brightnessInput.value;
   }
