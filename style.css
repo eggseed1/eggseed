@@ -174,9 +174,52 @@ body{background-color:#fff;background-image:radial-gradient(#ddd .5px,transparen
 .navrow .symbol{color:#444}
 .navrow.active{font-weight:bold;background:#efefef}
 .centerframe{position:relative;padding:8px 9px;overflow:hidden}
-.centerframe::before,.centerframe::after{content:"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\A @########@##############@#######@@#####@#######@########@######@##\A #+#++##++#++##+++#++#+###+#++##+##++###+##++++#+++#+###+#++###++\A @@#+###@@##@@#######@@##@@#+#@@##@@######@@@##@@#+#@###@@#####+\A #++###++#######+#++#######++###++#######+#@######+####++#####@#+#\A ++++++++#######+#++####@@++++++++#######+####@#++++++++######++#+\A @#+++++####@#+#####:#@####+++++####@#+###@++@@###++++++####@++@##\A +##+++###+######+#####++###+++###+######+#####++##++++###+####@++@\A +##@####+  :##+###+@+   +##@####:  :##+#####:   ###@####   +#####\A  :+###+:     : ##+ :     :+###+:     : ##+::     :####:     : :##+\A    ++:                     ++:                     ++";display:block;font:6px/.95 "Courier New",monospace;white-space:pre;overflow:hidden;max-width:100%;color:#0a0a0a;margin:0 0 10px;text-align:left}
-.centerframe::after{transform:scaleY(-1);margin:12px 0 0}
-.panel:not(.navbox)::after{content:"@########@##############@####\A #+#++##++#++##+++#++#+###+#++\A @@#+###@@##@@#######@@##@@#+#\A #++###++#######+#++#######++#\A ++++++++#######+#++####@@++++\A @#+++++####@#+#####:#@####+++\A +##+++###+######+#####++###++\A +##@####+  :##+###+@+   +##@#";display:block;font:5px/.95 "Courier New",monospace;white-space:pre;color:#171717;max-width:100%;overflow:hidden;margin:8px 0 -3px}
+/* ASCII lace is a border ornament, not document content.
+   Place it in reserved top/bottom padding on EVERY outer panel,
+   including .panel.rightbox, .panel.navbox and .centerframe. */
+.panel,
+.centerframe{
+  position:relative;
+  padding-top:29px;
+  padding-bottom:29px;
+  overflow:hidden;
+}
+.panel::before,
+.panel::after,
+.centerframe::before,
+.centerframe::after{
+  content:"@########@##############@#######@@#####@#######@########@######@##@########@##############@#######@@#####@#######@########@######@##\A #+#++##++#++##+++#++#+###+#++##+##++###+##++++#+++#+###+#++###++#++##++#++##+++#++#+###+#++##+##++###+##++++#+++#+###+#++###++\A @@#+###@@##@@#######@@##@@#+#@@##@@######@@@##@@#+#@###@@#####+@@#+###@@##@@#######@@##@@#+#@@##@@######@@@##@@#+#@###@@#####+\A #++###++#######+#++#######++###++#######+#@######+####++#####@#+##++###++#######+#++#######++###++#######+#@######+####++#####@#+";
+  display:block;
+  position:absolute;
+  left:7px;
+  right:7px;
+  top:6px;
+  height:20px;
+  margin:0;
+  padding:0;
+  border:0;
+  color:#222;
+  background:transparent;
+  font:5px/1 "Courier New",monospace;
+  letter-spacing:0;
+  text-align:left;
+  white-space:pre;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+.panel::after,
+.centerframe::after{
+  top:auto;
+  bottom:6px;
+  transform:scaleY(-1);
+}
+/* Content remains in its normal flow, between the two ornaments. */
+.panel > *,
+.centerframe > *{
+  position:relative;
+  z-index:1;
+}
 .section-head{font:italic bold 15px/1.2 Georgia,"Times New Roman",serif;margin:0 0 9px;padding-bottom:5px;border-bottom:1px dashed #888}
 .section-head::before,.section-head::after{font-style:normal;font-weight:normal}
 .subhead,.minibox h2,.blog-box>h2{font-family:Georgia,"Times New Roman",serif;font-size:12px;font-weight:bold}
@@ -218,7 +261,7 @@ body{background-color:#fff;background-image:radial-gradient(#ddd .5px,transparen
  .columns,.maker-page .columns{grid-template-columns:1fr;gap:8px}
  .site-header{height:95px}
  .navbox .inner{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
- .panel:not(.navbox)::after{font-size:6px}
+ .panel::before,.panel::after,.centerframe::before,.centerframe::after{font-size:5px}
  .running-horse{opacity:.07}
 }
 @media(max-width:380px){.site-name.ascii-title pre{font-size:7px}}
