@@ -28,7 +28,9 @@ With only a username, the build fetches a public RSS feed from the unofficial `l
 
 If the feed is temporarily down, the website displays a profile link instead of claiming a track is playing. The listening line remains a placeholder until a username is configured.
 
-The in-browser ASCII maker converts local raster pictures to editable text, with width, contrast, brightness, character-palette and invert controls. Save the result as .txt or copy it. It needs JavaScript because plain HTML/CSS cannot read pixels; all computation stays in your browser. The optional Python converter still works offline.
+The in-browser ASCII maker turns local photos, record scans and screenshots into editable text at **24–1,200 columns**. Use the quick presets (80, 160, 320, 640 and 1,200) or type an exact column count. The fine-detail palette offers many more grayscale steps than classic ASCII; edge sharpening, optional dithering, contrast, brightness and inversion help retain photographic detail.
+
+Use **text size** to zoom the editor and **wide view** to expand it across most of the screen. Very wide art stays unwrapped and can be scrolled horizontally, copied, or saved as a complete `.txt` file. For browser safety, the converter limits a single output to about **1.2 million characters / 2,200 rows**; when extremely tall inputs exceed that limit it reports the actual adjusted width rather than silently compressing them to 200 rows. A dependency-free smoke test at `scripts/test-ascii-maker.cjs` runs before GitHub Pages publication and validates a real 1,200-column conversion. The published website uses JavaScript only on this maker page; all image processing stays local. The optional Python converter works offline too.
 
 ## Blog layout & the record cabinet
 
