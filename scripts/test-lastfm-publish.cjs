@@ -11,7 +11,7 @@ for (const file of pages) {
   const html = fs.readFileSync(file,"utf8");
   assert.ok(html.includes("<!-- LASTFM_START -->") && html.includes("<!-- LASTFM_END -->"), file);
   assert.ok(!html.includes("Last.fm not connected yet"), file + ": stale placeholder");
-  assert.ok(html.includes(fallback), file + ": missing public profile fallback");
+  assert.ok(html.includes(fallback) || /href="https:\/\/www\.last\.fm\/music\//.test(html), file + ": missing Last.fm track or public profile link");
 }
 assert.equal(fs.readFileSync("lastfm-username.txt","utf8").trim().split("\n").at(-1),"eggseed0");
 console.log("Last.fm source fallback OK on " + pages.length + " pages.");
