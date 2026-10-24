@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -32,6 +33,7 @@ jobs:
           node --check ascii-maker.js
           node scripts/test-ascii-maker.cjs
           node scripts/test-mobile-layout.cjs
+          node scripts/test-lastfm-publish.cjs
       - name: Update recent Last.fm text
         env:
           LASTFM_USERNAME: ${{ vars.LASTFM_USERNAME }}
@@ -41,6 +43,10 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
+      - name: Wait for standard Pages build to finish
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/wait_for_pages_branch_build.py
       - name: Publish
         id: deployment
         uses: actions/deploy-pages@v4
