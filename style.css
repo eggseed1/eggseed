@@ -1001,3 +1001,32 @@ body::before,body::after {
   margin:12px 0 4px;color:#777;text-align:center;
   font:9px/1.4 "Courier New",monospace
 }
+
+
+/* about page: keep the writer's voice, add an analog 45 and a compact directory */
+.about-page .about-intro p{
+  font:11px/1.75 "Trebuchet MS",Tahoma,Verdana,sans-serif;
+  margin:0 0 12px;
+  overflow-wrap:break-word;
+}
+.about-page .about-45{
+  font:10px/1.05 "Courier New",monospace;
+  margin:12px auto 14px;
+  padding:8px 0;
+  text-align:center;
+  white-space:pre;
+  overflow:visible;
+  color:#303030;
+  border-block:1px dotted #aaa;
+}
+.about-page .about-links{margin:12px 0 4px}
+.about-page .about-links h2{margin-bottom:9px}
+.about-page .about-links ul{list-style:none;padding:0;margin:0}
+.about-page .about-links li{
+  border-bottom:1px dotted #ccc;
+  padding:8px 0;
+  display:flex;flex-wrap:wrap;gap:2px 7px;
+  justify-content:space-between;align-items:baseline;
+}
+.about-page .about-links li a{font:10px/1.35 "Courier New",monospace}
+.about-page .about-links li span{font:9px/1.35 "Courier New",monospace;color:#777}
