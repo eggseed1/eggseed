@@ -1036,24 +1036,6 @@ body::before,body::after {
 .about-page .about-horse-ascii{display:block;flex:none;margin:0;padding:0;border:0;background:transparent;color:#222;font:400 6.2px/1 "Courier New",Courier,monospace;letter-spacing:0;text-align:left;white-space:pre}
 @media(max-width:560px){.about-page .about-horse-ascii{font-size:clamp(4px,1.75vw,6.2px)}}
 
-/* Guestbook: minimal text-only styling */
-.guestbook-page{min-width:0}
-.guestbook-page .guestbook-doodle{font:9px/1.1 "Courier New",monospace;text-align:center;white-space:pre;margin:12px auto 15px;color:#444;overflow:hidden}
-.guestbook-page .guestbook-intro{font:11px/1.7 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:8px 0 13px}
-.guestbook-page .guestbook-cta{text-align:center;margin:12px 0 5px}
-.guestbook-page .guestbook-cta a{display:inline-block;border:1px dashed #666;padding:8px 12px;font:700 11px/1.25 "Courier New",monospace;background:#f8f8f8;color:#111}
-.guestbook-page .guestbook-cta a:hover{background:#eee}
-.guestbook-page .guestbook-help{font:9px/1.5 "Courier New",monospace;color:#666;text-align:center;margin:6px 0 20px}
-.guestbook-page .guestbook-note-section{border-top:1px dotted #999;padding-top:12px}
-.guestbook-page .guestbook-note-section .subhead{text-align:left;margin:0 0 12px}
-.guestbook-page .guestbook-status{font:10px/1.6 "Courier New",monospace;color:#666;margin:10px 0}
-.guestbook-page .guestbook-entry{border-bottom:1px dotted #bbb;padding:10px 0 12px;min-width:0}
-.guestbook-page .guestbook-entry-header{display:flex;justify-content:space-between;gap:5px;flex-wrap:wrap;align-items:baseline;font:10px/1.4 "Courier New",monospace}
-.guestbook-page .guestbook-entry-name{font-weight:bold;overflow-wrap:anywhere}
-.guestbook-page .guestbook-entry-date{font-size:9px;color:#777}
-.guestbook-page .guestbook-entry-body{font:10px/1.6 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
-.guestbook-page .guestbook-all{text-align:center;font:9px/1.5 "Courier New",monospace;margin:17px 0 7px}
-
 /* Loose interests & collected things share one little archive. */
 .archive-page .archive-lede{font:11px/1.7 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:2px 0 15px;overflow-wrap:break-word}
 .archive-page .archive-loose-notes{padding:10px 0 15px;border-top:1px dotted #aaa}
@@ -1063,3 +1045,18 @@ body::before,body::after {
 .archive-page .archive-collection .block-art{margin:8px auto 12px}
 .archive-page .archive-collection .file-row{padding:8px 2px}
 .archive-page .archive-collection .file-title{margin:0}
+
+/* One consistent eight-item navigation list across the site. */
+.navbox nav{display:flex;flex-direction:column;align-items:stretch}
+.navbox .navrow{display:block;box-sizing:border-box;white-space:nowrap}
+.navbox .navrow::before{box-sizing:border-box;flex:none}
+@media(max-width:680px){.site .navbox .inner{display:block!important}}
+/* Minimal on-site guestbook comments powered by a hosted comment service. */
+.guestbook-page{min-width:0}
+.guestbook-page #HCB_comment_box{font:10px/1.5 "Courier New",Courier,monospace;color:#222;min-height:120px;overflow-wrap:anywhere}
+.guestbook-page #HCB_comment_box h3,.guestbook-page #HCB_comment_box h4{font:700 11px/1.5 Georgia,serif;color:#222;margin:0 0 9px}
+.guestbook-page #HCB_comment_box input:not([type="checkbox"]):not([type="radio"]),.guestbook-page #HCB_comment_box textarea{display:block;box-sizing:border-box;max-width:100%;width:100%;padding:7px;border:1px dashed #999;border-radius:0;background:#fff;color:#222;font:11px/1.5 "Courier New",monospace}
+.guestbook-page #HCB_comment_box input[type="submit"],.guestbook-page #HCB_comment_box button{width:auto!important;max-width:100%;padding:6px 10px;border:1px solid #777;border-radius:0;background:#f8f8f8;color:#111;font:10px "Courier New",monospace;cursor:pointer}
+.guestbook-page #HCB_comment_box .comment,.guestbook-page #HCB_comment_box .hcb-comment-tb,.guestbook-page #HCB_comment_box blockquote{border:0;border-bottom:1px dotted #aaa;box-shadow:none}
+.guestbook-page #HCB_comment_box a{overflow-wrap:anywhere}
+.guestbook-page #HCB_comment_box .hcb-icon{max-width:16px;max-height:16px}
