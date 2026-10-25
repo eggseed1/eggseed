@@ -1,4 +1,5 @@
 name: Identify record labels from photographs
+# second pass: captioned records without full IDs
 on:
   push:
     paths:
