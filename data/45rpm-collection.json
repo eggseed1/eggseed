@@ -480,12 +480,12 @@
       ],
       "alt": "Photo by @45rpmdigger on July 06, 2025.",
       "artist": "Rick Stanford",
-      "b": "Voices of Arizona",
+      "b": "Voice of Arizona",
       "label": "Jorel",
       "research": "The blue-and-white label clearly reads JOREL, JR-110B, “VOICE OF ARIZONA,” and RICK STANFORD; the original caption calls the song “Voices of Arizona.” The photographed copy is marked B-side. The A-side and year have not been confirmed from independent sources.",
-      "title": "Voice of Arizona (side B shown)",
+      "title": "",
       "catalog": "JR-110B",
-      "matchStatus": "artist, label, title and catalog printed in photograph"
+      "matchStatus": "artist, B-side title, label and catalog verified from photographed label"
     },
     {
       "id": "023",
