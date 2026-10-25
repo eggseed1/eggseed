@@ -1035,3 +1035,21 @@ body::before,body::after {
 .about-page .about-art{margin:12px auto 14px;padding:8px 0;border-block:1px dotted #aaa;display:flex;justify-content:center;max-width:100%;min-width:0;overflow:hidden}
 .about-page .about-horse-ascii{display:block;flex:none;margin:0;padding:0;border:0;background:transparent;color:#222;font:400 6.2px/1 "Courier New",Courier,monospace;letter-spacing:0;text-align:left;white-space:pre}
 @media(max-width:560px){.about-page .about-horse-ascii{font-size:clamp(4px,1.75vw,6.2px)}}
+
+/* Guestbook: minimal text-only styling */
+.guestbook-page{min-width:0}
+.guestbook-page .guestbook-doodle{font:9px/1.1 "Courier New",monospace;text-align:center;white-space:pre;margin:12px auto 15px;color:#444;overflow:hidden}
+.guestbook-page .guestbook-intro{font:11px/1.7 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:8px 0 13px}
+.guestbook-page .guestbook-cta{text-align:center;margin:12px 0 5px}
+.guestbook-page .guestbook-cta a{display:inline-block;border:1px dashed #666;padding:8px 12px;font:700 11px/1.25 "Courier New",monospace;background:#f8f8f8;color:#111}
+.guestbook-page .guestbook-cta a:hover{background:#eee}
+.guestbook-page .guestbook-help{font:9px/1.5 "Courier New",monospace;color:#666;text-align:center;margin:6px 0 20px}
+.guestbook-page .guestbook-note-section{border-top:1px dotted #999;padding-top:12px}
+.guestbook-page .guestbook-note-section .subhead{text-align:left;margin:0 0 12px}
+.guestbook-page .guestbook-status{font:10px/1.6 "Courier New",monospace;color:#666;margin:10px 0}
+.guestbook-page .guestbook-entry{border-bottom:1px dotted #bbb;padding:10px 0 12px;min-width:0}
+.guestbook-page .guestbook-entry-header{display:flex;justify-content:space-between;gap:5px;flex-wrap:wrap;align-items:baseline;font:10px/1.4 "Courier New",monospace}
+.guestbook-page .guestbook-entry-name{font-weight:bold;overflow-wrap:anywhere}
+.guestbook-page .guestbook-entry-date{font-size:9px;color:#777}
+.guestbook-page .guestbook-entry-body{font:10px/1.6 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.guestbook-page .guestbook-all{text-align:center;font:9px/1.5 "Courier New",monospace;margin:17px 0 7px}
