@@ -1046,7 +1046,7 @@ body::before,body::after {
 .archive-page .archive-collection .file-row{padding:8px 2px}
 .archive-page .archive-collection .file-title{margin:0}
 
-/* One consistent eight-item navigation list across the site. */
+/* One consistent seven-item navigation list across the site. */
 .navbox nav{display:flex;flex-direction:column;align-items:stretch}
 .navbox .navrow{display:block;box-sizing:border-box;white-space:nowrap}
 .navbox .navrow::before{box-sizing:border-box;flex:none}
@@ -1069,3 +1069,28 @@ body::before,body::after {
 .blog-entry .blog-entry-body p{font:11px/1.85 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:0 0 17px;overflow-wrap:break-word}
 .blog-entry .blog-entry-body em{font-style:italic}
 .blog-entry .blog-entry-bottom{border-top:1px dotted #aaa;padding-top:11px;margin:7px 0 0}
+
+/* ASCII-style guestbook controls, including third-party injected form labels. */
+.guestbook-page #HCB_comment_box,
+.guestbook-page #HCB_comment_box form,
+.guestbook-page #HCB_comment_box label,
+.guestbook-page #HCB_comment_box input,
+.guestbook-page #HCB_comment_box textarea,
+.guestbook-page #HCB_comment_box button{font-family:"Courier New",Courier,monospace!important}
+.guestbook-page #HCB_comment_box label{font-size:10px!important;color:#333!important;letter-spacing:0!important}
+.guestbook-page #HCB_comment_box #hcb_form_name,
+.guestbook-page #HCB_comment_box #hcb_form_content{border:1px dashed #777!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;font-size:11px!important}
+.guestbook-page #HCB_comment_box form a,
+.guestbook-page #HCB_comment_box .hcb-add-image,
+.guestbook-page #HCB_comment_box .hcb-image-btn,
+.guestbook-page #HCB_comment_box .hcb-upload-link{
+ display:inline-block!important;padding:3px 5px!important;
+ border:1px dotted #aaa!important;border-radius:0!important;
+ color:#111!important;background:#fff!important;text-decoration:none!important;
+ font:10px/1.4 "Courier New",Courier,monospace!important;
+ box-shadow:none!important;
+}
+.guestbook-page #HCB_comment_box form a:hover,
+.guestbook-page #HCB_comment_box form a:focus-visible{background:#f0f0f0!important;text-decoration:underline!important}
+.guestbook-page #HCB_comment_box #hcb_submit,
+.guestbook-page #HCB_comment_box .submit{width:auto!important;max-width:100%!important;border:1px solid #777!important;border-radius:0!important;background:#fafafa!important;color:#111!important;font:10px/1.4 "Courier New",Courier,monospace!important;box-shadow:none!important}
