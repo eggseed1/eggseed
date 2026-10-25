@@ -1,0 +1,17 @@
+name: Identify record labels from photographs
+on:
+  push:
+    paths:
+      - ".github/workflows/label-visual-check.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visualize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare image sheet
+        run: python3 -m pip install --quiet pillow
+      - name: Emit label sheets
+        run: python3 -u scripts/temporary_label_sheet.py
