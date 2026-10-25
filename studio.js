@@ -341,7 +341,7 @@
       var posts = current.posts.filter(function (p) { return p.id !== id; }).concat([post]);
       var targets = Array.from(new Set(Object.keys(CONFIG).map(function (key) { return CONFIG[key].index; })));
       var indexes = await Promise.all(targets.map(fileFromGitHub));
-      if (!template) template = await fileFromGitHub("blog/first-ramblings-october.html");
+      if (!template) template = await fileFromGitHub("templates/post.html");
       var branch = await request("/branches/" + BRANCH);
       var treeItems = [
         { path: "data/studio-posts.json", mode: "100644", type: "blob",
