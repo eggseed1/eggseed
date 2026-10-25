@@ -39,8 +39,10 @@
       ],
       "alt": "Photo by @45rpmdigger on August 17, 2025.",
       "artist": "Blind Blake (Alphonso Higgs)",
-      "title": "Bahamian calypso record",
-      "research": "The specific title, label and edition are not identified by the caption."
+      "title": "J P Morgan / Jones Oh Jones (featured songs)",
+      "research": "The post specifically names “J P Morgan” and “Jones Oh Jones” as favorite tracks. Both are documented songs performed by Blind Blake (Alphonso Higgs). Without confirming the photographed edition, these are not assigned as the two sides of this copy.",
+      "source": "https://www.roughtrade.com/product/blind-blake-and-the-royal-victoria-hotel-calypsos/bahamian-songs",
+      "matchStatus": "songs identified; pressing unverified"
     },
     {
       "id": "003",
@@ -150,9 +152,16 @@
         "https://scontent-icn2-1.cdninstagram.com/v/t51.82787-15/532940000_17851984734519024_5996953229877371795_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ig_cache_key=MzY5OTM0MzQ3NjExMTI1NjQyOQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=AolhQQiOIwMQ7kNvwEe2Wd8&_nc_oc=AdqhBzi4aPhFsNLY78ThyxG5zobrRdQRL8jlJwitXhzIh7CxWL77s18F051y0LleU00&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-icn2-1.cdninstagram.com&_nc_gid=OC1gFiYa00yAPM0DxoPYEA&_nc_ss=7a20f&oh=00_AQNdqS-fBx0_CESyeKqDrgQPa_Mt_QVncVfjClEbtNGVbw&oe=6AE32A94"
       ],
       "alt": "Photo by @45rpmdigger on August 14, 2025.",
-      "artist": "Unidentified artist",
-      "title": "I Belong to the Beat Generation",
-      "research": "The quoted refrain comes from the original caption; precise release/performer not established."
+      "artist": "Bob McFadden and Dor (Rod McKuen)",
+      "title": "",
+      "research": "The quoted “I belong to the Beat Generation” lyric and Halloween theme identify the song with Bob McFadden & Dor (Rod McKuen). The US Brunswick 9-55140 couples “The Mummy” with “The Beat Generation” (1959). Exact pressing of the photographed copy has not been independently compared to its label.",
+      "a": "The Mummy",
+      "b": "The Beat Generation",
+      "label": "Brunswick",
+      "catalog": "9-55140",
+      "year": "1959",
+      "source": "https://www.45cat.com/artist/bob-mcfadden-and-dor",
+      "matchStatus": "release strongly matched from caption"
     },
     {
       "id": "009",
@@ -183,10 +192,16 @@
         "https://scontent-fra5-1.cdninstagram.com/v/t51.82787-15/683212024_17885613498519024_730576850578190659_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=110&ig_cache_key=Mzg4Nzg5ODYxODU1MjkwNTg0Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=jG97B4Y58hsQ7kNvwGU071U&_nc_oc=AdqeCYCzf01if1Yu0-_Xf65ejXzKOioQHL9E45doIKsvE42tPQmvR-PKAnnMt6NUyo0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-fra5-1.cdninstagram.com&_nc_gid=UbPof1dV42SBIW9KroCbrw&_nc_ss=7a20f&oh=00_AQMQI_k0mh7LdNu-b4pYZz5z0iU-5CYTddyukmkwzQvWuw&oe=6AE30A60"
       ],
       "alt": "Photo by @45rpmdigger on May 01, 2026.",
-      "artist": "Unidentified rockabilly artist",
-      "a": "Rockin' Little Eskimos",
-      "b": "The Ballad of the Angels",
-      "research": "Both titles are supplied by the collector; performer/label not identified."
+      "artist": "Bobby Swanson and His Sonics",
+      "a": "Rockin' Little Eskimo",
+      "b": "The Ballad of Angel",
+      "research": "The collector's caption uses “Rockin’ Little Eskimos” and “The Ballad of the Angels”; the documented release spells the titles “Rockin’ Little Eskimo” / “The Ballad of Angel.” Credited to Bobby Swanson and His Sonics on Alaska's Igloo label, no. 1003, issued in November 1959. A contemporary Cash Box review also documents both sides.",
+      "title": "",
+      "label": "Igloo",
+      "catalog": "1003",
+      "year": "November 1959",
+      "source": "https://www.45cat.com/record/nc777873us",
+      "matchStatus": "release strongly matched from caption"
     },
     {
       "id": "011",
@@ -269,9 +284,16 @@
         "https://instagram.fbri2-1.fna.fbcdn.net/v/t51.82787-15/515932227_17845495488519024_5930388318545975040_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=MzY3MDQzNTkxMDg2MjE4MTcwOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=sV685FsQMeoQ7kNvwEX71O7&_nc_oc=AdrcQl_F-c0vc9LBqvCDmyQtF3wiT56bG81VDWxiRV9lyi9Zbwi_lX8A396nNnmE-DU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbri2-1.fna&_nc_gid=HiiYh0sVw5wR3lrgxRicSw&_nc_ss=7a20f&oh=00_AQMCU1hbj0INOe80gDJlr0rQRqc1U3TRpmQCoWAd8o5cfA&oe=6AE31D84"
       ],
       "alt": "Photo by @45rpmdigger on July 05, 2025.",
-      "artist": "Unidentified duo from Buffalo, NY",
-      "title": "If This World Were Mine (cover)",
-      "research": "Original caption names the song covered, not the performers."
+      "artist": "Bob & Gene",
+      "title": "",
+      "research": "Buffalo duo Bob & Gene recorded the Marvin Gaye/Tammi Terrell song “If This World Were Mine” on their local Mo Do label. Independent label discographies list the 1971 single Mo Do 125 with “It Won't Go” on the flip. Daptone's artist biography specifically describes their obscure Buffalo 45. Likely this copy; label photo should be checked before treating pressing as certain.",
+      "a": "If This World Were Mine",
+      "b": "It Won't Go",
+      "label": "Mo Do",
+      "catalog": "125",
+      "year": "1971",
+      "source": "https://www.45rpmrecords.com/ST/Mo%20Do%20%28NY%29.php",
+      "matchStatus": "release strongly matched from caption"
     },
     {
       "id": "016",
@@ -288,7 +310,14 @@
       "alt": "Photo by @45rpmdigger on July 05, 2025.",
       "artist": "Bob Landy",
       "label": "Ark",
-      "research": "Artist and Ark label from original notes; title/pressing not verified."
+      "research": "Bob Landy's 1963 Cincinnati pressing is documented on Ark 272 with “Ball Room Was Empty” and “Waltz of the Calvera” (RITE matrix numbers 10559/10560). The caption specifically says this Ark release is his only record, supporting the identification.",
+      "a": "Ball Room Was Empty",
+      "b": "Waltz of the Calvera",
+      "title": "",
+      "catalog": "272",
+      "year": "1963",
+      "source": "https://www.45rpmrecords.com/artists/L.php",
+      "matchStatus": "strong catalog match"
     },
     {
       "id": "017",
@@ -376,7 +405,13 @@
       "alt": "Photo by @45rpmdigger on July 05, 2025.",
       "artist": "The Hill-Dillies",
       "a": "The Eden Valley Fox Hunt",
-      "research": "Title A and artist from collector's notes; B-side title not stated."
+      "research": "A collector's detailed discussion names the B-side as “The Wabash Cannon Ball” and dates the custom disc to 1969, with WJON Broadcasting copyright credit. This matches the train sounds mentioned in the original caption. The exact catalog number has not been confirmed.",
+      "b": "The Wabash Cannon Ball",
+      "title": "",
+      "label": "The Hill-Dillies (custom pressing)",
+      "year": "1969",
+      "source": "https://allensarchiveofearlyoldcountrymusic.blogspot.com/2012/01/hill-dillies-45.html",
+      "matchStatus": "both songs documented"
     },
     {
       "id": "022",
