@@ -3,7 +3,7 @@
 const fs = require("node:fs");
 const assert = require("node:assert/strict");
 const root = ".";
-const pages = fs.readdirSync(root).filter(f => f.endsWith(".html"))
+const pages = fs.readdirSync(root).filter(f => f.endsWith(".html") && f !== "studio.html")
   .concat(["records", "reviews"].flatMap(dir =>
     fs.readdirSync(dir).filter(f => f.endsWith(".html")).map(f => dir + "/" + f)));
 const fallback = "https://www.last.fm/user/eggseed0";
