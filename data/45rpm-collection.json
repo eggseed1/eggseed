@@ -62,7 +62,10 @@
       "label": "Nicktone",
       "year": "1961",
       "source": "https://www.45cat.com/cdalbum/cd/6134141",
-      "research": "Both titles corroborated in a compilation tracklist; exact original pressing number not independently confirmed."
+      "research": "The label photograph reads NICKTONE RECORD CO., Lakeland, Florida, CP-6019, SIDE 1, “ALWAYS ALONE,” LEFTY NICKS AND HIS SOUTHERN DRIFTERS. The collector caption provides the flip “Model A Ford Blues” and gives 1961. The CP-6019 printed number may be a matrix rather than a label catalog number.",
+      "title": "",
+      "catalog": "CP-6019 (side 1 matrix)",
+      "matchStatus": "artist, label and A-side from photo; B-side from caption"
     },
     {
       "id": "004",
@@ -100,8 +103,11 @@
       ],
       "alt": "Photo by @45rpmdigger on December 12, 2025.",
       "artist": "Johnny Doe (Darryl Humphrey)",
-      "title": "Devil Train",
-      "research": "Artist and title from original collection notes; label and other side not verified."
+      "title": "Devil Train (side A shown)",
+      "research": "The yellow label photo shows “DEVIL TRAIN” (Darryl Humphrey) by JOHNNY DOE, with catalog marking AS 517-A and an AIS/AS Records imprint. The original caption clarifies this Johnny Doe is Darryl Humphrey, not Stan Furlow. The flip title remains unidentified.",
+      "label": "AIS Records (as printed)",
+      "catalog": "AS 517-A (label reading)",
+      "matchStatus": "visible title, pseudonym, writer and A-side from photo"
     },
     {
       "id": "006",
@@ -120,7 +126,9 @@
       "a": "Bright Light, Big Star",
       "b": "Heart of Gold",
       "label": "Blue Valley",
-      "research": "Label and titles from original post; exact catalog number, date, and pressing unverified."
+      "research": "The photograph shows the A-side “BRIGHT LIGHT BIG STAR” credited to Virgil Weaver on Blue Valley. The original collector caption supplies the flip “Heart of Gold” and describes MCM Studios in Mt. Clemens, Michigan. The exact catalog number and pressing date remain unconfirmed.",
+      "title": "",
+      "matchStatus": "A-side photo + B-side noted in original caption"
     },
     {
       "id": "007",
@@ -134,10 +142,16 @@
         "https://scontent-mxp1-1.cdninstagram.com/v/t51.82787-15/533237617_17851986219519024_5063528198391262817_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=107&ig_cache_key=MzY5OTM1NzM4NTY1NjQ5MDQ5OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=FwbqnjT-fgUQ7kNvwFCU0iI&_nc_oc=AdodOrW4zICFLrjbzSgB4hL2uK7ZBr7EcgZm8kFVtYITpjTlbj7gYSiYi07HfM9xGcs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-mxp1-1.cdninstagram.com&_nc_gid=sGFf8Q5vd7aNcykbK546Kw&_nc_ss=7a20f&oh=00_AQMKSdSDkwshqNUSlCzHY9JWyXnyzRKMSE9jFu8IgNifcA&oe=6AE32A5B"
       ],
       "alt": "Photo by @45rpmdigger on August 14, 2025.",
-      "artist": "The Chronicles Church",
+      "artist": "The Chronicle Church",
       "label": "Pashlo",
       "year": "1976",
-      "research": "Artist, label and date are from the original caption; side titles not given."
+      "research": "The photographed red Pashlo label shows THE CHRONICLE CHURCH, “MYSTERY,” side 1, PH-1006. A cataloged copy lists the flip as “Bionic Movement” with the paired PH-1007 designation and dates the disc to 1976. The earlier importer label “Chronicles Church” came from the caption; the physical label says “Chronicle Church.”",
+      "a": "Mystery",
+      "b": "Bionic Movement",
+      "title": "",
+      "catalog": "PH-1006 / PH-1007",
+      "source": "https://www.tornlightrecords.com/shop/the-chronicle-church-mystery-bionic-movement/",
+      "matchStatus": "label photo + catalog verified"
     },
     {
       "id": "008",
@@ -176,9 +190,12 @@
         "https://instagram.fbne10-1.fna.fbcdn.net/v/t51.82787-15/590426608_17865974652519024_37275906994516903_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=Mzc4NTg3OTAyNjQ2NTMzODM1OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=RuxzEzxTSucQ7kNvwFvdSFu&_nc_oc=AdqZEbiFBHh6U1VR0PbqiPyikWoLxiqjgn0mTn-aG-jEarmoYvut0OCTFp-v17glyf8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbne10-1.fna&_nc_gid=cgSJQJZxaUhenc9_2NsY6Q&_nc_ss=7a20f&oh=00_AQMNaXcPY9n7witJDWtnwEErYpP2PgHfewfCh5eUDY-L-g&oe=6AE32CC3"
       ],
       "alt": "Photo by @45rpmdigger on December 12, 2025.",
-      "artist": "Forrest Green",
-      "label": "Ranger",
-      "research": "Original notes specify Forrest Green and Ranger Records but do not give the side titles; do not confuse this with other Ranger 45s."
+      "artist": "Forrest Green and the Ranger Family",
+      "label": "Ranger Records",
+      "research": "The yellow Ranger Records label identifies Forrest Green and the Ranger Family on side A: “The Lord Gave and Uncle Sam Took It Away,” with 790221 printed. This fits the original post's description of Forrest Green on his own Ranger label. The B-side remains to be verified.",
+      "title": "The Lord Gave and Uncle Sam Took It Away (side A shown)",
+      "catalog": "790221 (label number)",
+      "matchStatus": "visible A-side and credit identified from label"
     },
     {
       "id": "010",
@@ -282,12 +299,16 @@
         "https://instagram.fmxp5-1.fna.fbcdn.net/v/t51.82787-15/523533565_17848778115519024_4242235907584318869_n.jpg?stp=dst-jpegr_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=MzY4Mjc2NDk4ODA4MDQzNTE3Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5oZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=BgvaThftFPcQ7kNvwEyo28z&_nc_oc=Ado-e0X99yGemQXn8y3EGppMqFCS-uZPKn92DJNLgOd3MR5_FPwGJiTPM6eJGrrSQE72-83UWy3p6mqg5UUcupvr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fmxp5-1.fna&_nc_gid=VFTWSxpUjjSZj2Jxf_sphg&_nc_ss=7a20f&oh=00_AQMbshjW5FykU8JuB-A7Jt4untFfSgShCRbp6eqakr28qA&oe=6AE32DEB"
       ],
       "alt": "Photo by @45rpmdigger on July 22, 2025.",
-      "artist": "Dale Davis",
-      "title": "Gotta Rock",
-      "label": "Olympic (reissue)",
-      "year": "1970s reissue; original c. 1956",
+      "artist": "Dale Davis & Tom Cats",
+      "title": "",
+      "label": "Olympic",
+      "year": "October 1, 1978 (label date)",
       "source": "https://www.popsike.com/Over-400-Rockabilly-45s-new-repros-mint-condition/190498950930.html",
-      "research": "Caption identifies an Olympic reissue of a Stardale 0101 original; original catalog confirmed, exact Olympic edition not independently verified."
+      "research": "The photo shows the yellow OLYMPIC label reading “GOTTA ROCK,” DALE DAVIS & TOM CATS, 45-OR012-A, and the printed date October 1, 1978. The original note says this is a later reissue of Dale Davis's 1956 Stardale record, but the specific B-side must be checked.",
+      "a": "Gotta Rock",
+      "b": "not verified",
+      "catalog": "45-OR012-A",
+      "matchStatus": "label photo verifies pressing and date"
     },
     {
       "id": "015",
@@ -374,7 +395,11 @@
       "artist": "Larry Lee Phillipson",
       "a": "The Interstate Is Coming Through My Outhouse",
       "b": "The Prisoner's Song",
-      "research": "Both titles from original caption; exact label, catalog and pressing not confirmed."
+      "research": "The blue PHILLIPSON RECORDS label in the photo reads “THE PRISONER'S SONG” by LARRY LEE PHILLIPSON, with No. 2002 and Rockford, Illinois address. The original caption names “The Interstate Is Coming Through My Outhouse” as the other track. Side assignment follows the order in the caption, not an independent side A/B verification.",
+      "title": "",
+      "label": "Phillipson Records",
+      "catalog": "2002 (label number)",
+      "matchStatus": "artist, label and visible song from photo, other side from caption"
     },
     {
       "id": "019",
@@ -389,7 +414,15 @@
       ],
       "alt": "Photo by @45rpmdigger on July 21, 2025.",
       "artist": "Buck Griffin",
-      "research": "Artist named in original caption, but the specific record title and label are unspecified."
+      "research": "The photograph shows the blue Lin Records label, 45-1007-B, “One Day After Pay-Day” by Buck Griffin. The Lin discography confirms “Rollin' Tears” as the A-side and an October 1954 release. The original caption's discussion of income and working in the oil fields corresponds to the song.",
+      "a": "Rollin' Tears",
+      "b": "One Day After Pay-Day",
+      "title": "",
+      "label": "Lin",
+      "catalog": "45-1007",
+      "year": "October 1954",
+      "source": "https://www.45cat.com/label/lin",
+      "matchStatus": "label photo + discography verified"
     },
     {
       "id": "020",
@@ -404,9 +437,11 @@
         "https://instagram.ftak1-1.fna.fbcdn.net/v/t51.82787-15/517023345_17845674285519024_3996454634654007764_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ig_cache_key=MzY3MTA1ODI1MzUxMDc4MzkzNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=T5rV6DKi2UoQ7kNvwHxYK0l&_nc_oc=AdososL9thA4POb_6O0ciWufjI3mLkL25HLoAADyKu9TBiPcet-bvITqFdHriwr1naHhMGWpmrMiA_UhUychSxBo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.ftak1-1.fna&_nc_gid=1BbG8n9cleTleZuMcuEuHQ&_nc_ss=7a20f&oh=00_AQPFs1-Cg7YkPQwvjW6HfBDf25E53PnDFe-uclOXB0TTpw&oe=6AE309AA"
       ],
       "alt": "Photo by @45rpmdigger on July 06, 2025.",
-      "artist": "Unidentified Jamaican gospel performers",
+      "artist": "Grace Peggy & Co",
       "label": "Narrow Way Gospel Line",
-      "research": "Small Jamaican gospel label named in caption; artist/title unknown."
+      "research": "The yellow Jamaican gospel label in the collection photograph reads NARROW WAY GOSPEL LINE and credits GRACE PEGGY & CO. The visible song title appears as “A LISTNING” (possibly a printing or spelling error for “A Listening”). The flip, pressing number, and year remain unverified. Identification is based on the photographed label, not a guessed Discogs match.",
+      "title": "A Listning (label spelling; side shown)",
+      "matchStatus": "artist and visible track read directly from label photo"
     },
     {
       "id": "021",
@@ -444,10 +479,13 @@
         "https://instagram.fbri2-1.fna.fbcdn.net/v/t51.82787-15/516522492_17845684833519024_6351159811008506642_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=MzY3MTEwNzE0NjMxOTYxMTUwOA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzIwLnNkci52aWRlb19kZWZhdWx0X2NvdmVyX2ZyYW1lLkMzIn0%3D&_nc_ohc=QMYcDj03X3MQ7kNvwHmrOfW&_nc_oc=AdpYDKSgVxzcHTHTGIW-RRib3Klcow4P8z-EczPe_Cv6u7fGVlmyCrbe_4vHpVf3I8Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbri2-1.fna&_nc_gid=lzL-EcVTDODjWewkr_CuYA&_nc_ss=7a20f&oh=00_AQOGsLaSxOHqc4f5RiyLUiXTuwAQp4Cq9dRjsDiwcYQ52Q&oe=6AE30A42"
       ],
       "alt": "Photo by @45rpmdigger on July 06, 2025.",
-      "artist": "Unidentified country artist",
+      "artist": "Rick Stanford",
       "b": "Voices of Arizona",
       "label": "Jorel",
-      "research": "B-side and label from caption; artist and A-side title still unidentified."
+      "research": "The blue-and-white label clearly reads JOREL, JR-110B, “VOICE OF ARIZONA,” and RICK STANFORD; the original caption calls the song “Voices of Arizona.” The photographed copy is marked B-side. The A-side and year have not been confirmed from independent sources.",
+      "title": "Voice of Arizona (side B shown)",
+      "catalog": "JR-110B",
+      "matchStatus": "artist, label, title and catalog printed in photograph"
     },
     {
       "id": "023",
