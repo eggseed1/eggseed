@@ -1060,3 +1060,12 @@ body::before,body::after {
 .guestbook-page #HCB_comment_box .comment,.guestbook-page #HCB_comment_box .hcb-comment-tb,.guestbook-page #HCB_comment_box blockquote{border:0;border-bottom:1px dotted #aaa;box-shadow:none}
 .guestbook-page #HCB_comment_box a{overflow-wrap:anywhere}
 .guestbook-page #HCB_comment_box .hcb-icon{max-width:16px;max-height:16px}
+
+/* Personal essay reading pages: simple typewritten journal layout. */
+.blog-entry .blog-entry-back{margin:0 0 11px;font:9px/1.5 "Courier New",monospace}
+.blog-entry .blog-entry-heading{border-bottom:1px dotted #aaa;padding:0 0 12px;margin:0 0 17px;text-align:left}
+.blog-entry .blog-entry-heading h1{font:700 16px/1.4 Georgia,"Times New Roman",serif;margin:0 0 6px;overflow-wrap:anywhere}
+.blog-entry .blog-entry-heading p{margin:0;font:9px/1.4 "Courier New",monospace;color:#777}
+.blog-entry .blog-entry-body p{font:11px/1.85 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:0 0 17px;overflow-wrap:break-word}
+.blog-entry .blog-entry-body em{font-style:italic}
+.blog-entry .blog-entry-bottom{border-top:1px dotted #aaa;padding-top:11px;margin:7px 0 0}
