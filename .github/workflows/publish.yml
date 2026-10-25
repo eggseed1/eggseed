@@ -35,6 +35,9 @@ jobs:
           node scripts/test-mobile-layout.cjs
           node scripts/test-record-collection.cjs
           node scripts/test-lastfm-publish.cjs
+          node --check studio.js
+          node --check tags.js
+          node scripts/test-studio.cjs
       - name: Cache Instagram 45rpm photos while URLs are valid
         run: python3 scripts/cache_record_photos.py
       - name: Preserve imported record photos in GitHub
