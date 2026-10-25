@@ -1053,3 +1053,13 @@ body::before,body::after {
 .guestbook-page .guestbook-entry-date{font-size:9px;color:#777}
 .guestbook-page .guestbook-entry-body{font:10px/1.6 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
 .guestbook-page .guestbook-all{text-align:center;font:9px/1.5 "Courier New",monospace;margin:17px 0 7px}
+
+/* Loose interests & collected things share one little archive. */
+.archive-page .archive-lede{font:11px/1.7 "Trebuchet MS",Tahoma,Verdana,sans-serif;margin:2px 0 15px;overflow-wrap:break-word}
+.archive-page .archive-loose-notes{padding:10px 0 15px;border-top:1px dotted #aaa}
+.archive-page .archive-loose-notes .subhead,.archive-page .archive-collection .subhead{margin:0 0 8px}
+.archive-page .archive-loose-notes p{font:10px/1.6 "Courier New",monospace;color:#555;margin:0}
+.archive-page .archive-collection{padding:11px 0 0;border-top:1px dotted #aaa}
+.archive-page .archive-collection .block-art{margin:8px auto 12px}
+.archive-page .archive-collection .file-row{padding:8px 2px}
+.archive-page .archive-collection .file-title{margin:0}
