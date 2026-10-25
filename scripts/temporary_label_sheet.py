@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 import sys
 ROOT=Path(__file__).resolve().parents[1]
-ids=[11,12,13,25,26,27,29,30,31,32,34]
+ids=[20,22,9,19,7,5,6,3,4,14,18]
 for view in ("whole","center"):
     size=480
     sheet=Image.new("RGB",(size*3,(size+38)*4),(246,246,246))
