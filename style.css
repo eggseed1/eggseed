@@ -1118,3 +1118,9 @@ body::before,body::after {
 .review-book-quotation cite{
   font:9px/1.5 "Courier New",monospace;color:#777;
 }
+
+/* Pynchon's 2025 novel: keep the tall book jacket at its natural ratio.
+   The surrounding three-column review layout is unchanged. */
+.review-pynchon-cover{width:min(100%,190px)}
+.review-pynchon-cover img{aspect-ratio:2/3;object-fit:contain;background:#f5f5f5}
+.reviews-index .review-entry-book-cover img{height:auto;aspect-ratio:2/3;object-fit:contain;background:#f5f5f5}
